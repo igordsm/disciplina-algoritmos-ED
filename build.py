@@ -25,7 +25,7 @@ sh('mkdir -p temp')
 
 for f in all_files:
     fname = osp.split(f)[1]
-    without_src = "site" / f.relative_to('src')
+    without_src = "docs" / f.relative_to('src')
     
 
     if osp.isdir(f):
