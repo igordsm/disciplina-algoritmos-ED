@@ -130,11 +130,77 @@ Se o seu nó `10` não está nessas posições chame o professor ou valide com a
 
 \vspace{1em}
 
-Conseguimos descer um nó de nível fazendo uma **rotação** na árvore. A figura abaixo exemplifica uma rotação para a **direita**. 
-<!-- ![Animação feita por TarElessar](rotacoes.gif) -->
-<!-- **Fonte**: [Feito por TarElessar](https://commons.wikimedia.org/wiki/File:Tree_rotation_animation_250x250.gif) -->
+Conseguimos descer um nó de nível fazendo uma **rotação** na árvore. Usaremos como referência a árovre abaixo e rodaremos o nó `10` à direita.  
+Iremos agora nomear alguns nós (e subárvores) para facilitar nossa vida. 
 
-- Na **rotação à direita** desceremos de nível a raiz $B$. Chamamos o elemento $A$ à esquerda de $B$ de **pivô**, já que ele será a nova raiz. A subárvore $\beta$ muda da esquerda de $A$ para a direita de $B$.
+``` {.graphviz}
+graph G {
+    R -- 10
+    R -- 20
+    10 -- 5
+    10 -- 15
+    5 -- 2
+    5 -- 7
+}
+```
+    
+- o nó `10` será a raiz antiga
+- o nó `5` será o pivô
+- a subárvore enraizada no nó `7` será chamada de $\beta$
+
+**Passo 1**: conectar o nó `10` (raiz antiga)  à *direita* do nó `5` (pivô). Isso implica em desconectar a subárvore enraizada no nó `7` ($\beta$), que por enquanto está desconectado do resto da árvore.
+
+``` {.graphviz}
+graph G {
+    R -- 10
+    R -- 20
+    5 -- 2
+    5 -- 10
+    10 -- n1
+    10 -- 15
+    7
+    n1[shape=poiny]
+}
+```
+
+**Passo 2**: Agora conectamos a subárvore enraizada em `7` ($\beta$) à *esquerda* do nó `10` (antiga raiz).
+
+``` {.graphviz}
+graph G {
+    2
+    5 
+    10
+    R -- 10
+    R -- 20
+    5 -- 2
+    5 -- 10
+    10 -- 7
+    10 -- 15
+}
+```
+
+**Passo 3**: agora tornamos o nó `5` (pivô) a raiz dessa árvore, conectando o pai do `10` (antiga raiz) ao nó `5`.
+
+``` {.graphviz}
+graph G {
+    R -- 5
+    R -- 20
+    5 -- 2
+    5 -- 10
+    10 -- 7
+    10 -- 15
+}
+```
+::: warn :::
+Importante
+
+Em todos os passos a árvore fica "torta" e tem problemas. 
+
+1. No passo 1, a subárvore enraizada no nó `7` ($\beta$) ficou desconectada do resto da árvore.
+2. No passo 2, o nó `10` tem dois predecessores, enquanto o nó `5` não tem nenhum. 
+
+Isso é normal. Nosso objetivo é deixá-la perfeita somente após o passo 3.
+:::
 
 ::: done :::
 Algoritmo
@@ -185,203 +251,57 @@ Agora que conseguimos "descer" um elemento de nível, temos um algoritmo de remo
 3. remova o nó de acordo com as explicações dos 3 casos fáceis
 4. devolva a nova raiz da subárvore que iniciava no elemento removido
 
-<!-- Vamos simular essa ideia para o grafo abaixo. Todas as rotações serão feitas para a direita. --> 
+Vamos simular essa ideia para o grafo abaixo. Todas as rotações serão feitas para a direita. 
 
-<!-- ``` {.graphviz} --> 
-<!-- digraph G { -->
-<!-- 50 -> 30 -->
-<!-- 50 -> 70 -->
-<!-- 30 -> 10 -->
-<!-- 30 -> 35 -->
-<!-- 10 -> 5 -->
-<!-- 10 -> n2 -->
-<!-- 70 -> 65 -->
-<!-- 70 -> 71 -->
-<!-- 71 -> n1 -->
-<!-- 71 -> 75 -->
-<!-- n1 [shape=point] -->
-<!-- n2 [shape=point] -->
-<!-- } -->
-<!-- ``` -->
+``` {.graphviz} 
+digraph G {
+50 -> 30
+50 -> 70
+30 -> 10
+30 -> 35
+10 -> 5
+10 -> n2
+70 -> 65
+70 -> 71
+71 -> n1
+71 -> 75
+n1 [shape=point]
+n2 [shape=point]
+}
+```
 
-<!-- !!! exercise -->
-    <!-- Simule a remoção do elemento 10 -->
+**Exercício**: Simule a remoção dos elementos `10, 70, 50` da árvore acima. Em cada simulação, sempre comece da árvore acima.
 
-    <!-- !!! answer --> 
-        <!-- A remoção do `10` é o caso fácil **2**. Para removê-lo basta fazer seu pai (`30`) apontar para a subárvore do nó `5`. O grafo ficaria como abaixo. --> 
-
-        <!-- ``` {.graphviz} --> 
-        <!-- digraph G { -->
-        <!-- 50 -> 30 -->
-        <!-- 50 -> 70 -->
-        <!-- 30 -> 5 -->
-        <!-- 30 -> 35 -->
-        <!-- 70 -> 65 -->
-        <!-- 70 -> 71 -->
-        <!-- 71 -> n1 -->
-        <!-- 71 -> 75 -->
-        <!-- n1 [shape=point] -->
-        <!-- } -->
-        <!-- ``` -->
-
-<!-- !!! exercise -->
-    <!-- Simula a remoção do elemento `70` -->
-
-    <!-- !!! answer --> 
-        <!-- O nó `70` tem dois filhos, portanto será necessário fazer rotações para descê-lo na árvore até chegar em dos casos fáceis. --> 
-
-        <!-- **Passo 1**: rotação à direita -->
-
-        <!-- ``` {.graphviz} --> 
-        <!-- digraph G { -->
-        <!-- 50 -> 30 -->
-        <!-- 50 -> 65 -->
-        <!-- 65 -> n4 -->
-        <!-- 65 -> 70 -->
-        <!-- 70 -> n3 -->
-        <!-- 70 -> 71 -->
-        <!-- 30 -> 10 -->
-        <!-- 30 -> 35 -->
-        <!-- 10 -> 5 -->
-        <!-- 10 -> n2 -->
-        <!-- 71 -> n1 -->
-        <!-- 71 -> 75 -->
-        <!-- n1 [shape=point] -->
-        <!-- n2 [shape=point] -->
-        <!-- n3 [shape=point] -->
-        <!-- n4 [shape=point] -->
-        <!-- } -->
-        <!-- ``` -->
-
-        <!-- **Passo 2**: Agora o `70` está na posição do caso fácil **1**! Podemos então só apontar o nó direito de `65` para a subárvore `71` -->
-
-        <!-- ``` {.graphviz} --> 
-        <!-- digraph G { -->
-        <!-- 50 -> 30 -->
-        <!-- 50 -> 65 -->
-        <!-- 65 -> n4 -->
-        <!-- 65 -> 71 -->
-        <!-- 30 -> 10 -->
-        <!-- 30 -> 35 -->
-        <!-- 10 -> 5 -->
-        <!-- 10 -> n2 -->
-        <!-- 71 -> n1 -->
-        <!-- 71 -> 75 -->
-        <!-- n1 [shape=point] -->
-        <!-- n2 [shape=point] -->
-        <!-- n4 [shape=point] -->
-        <!-- } -->
-        <!-- ``` -->
-
-<!-- !!! exercise -->
-    <!-- Simula a remoção do elemento `50` -->
-
-    <!-- !!! answer --> 
-        <!-- O `50` tem ambos os filhos, então precisaremos rotacioná-lo algumas vezes até chegar em um caso fácil. -->
-
-        <!-- **Passo 1**: rotação -->
-
-        <!-- ``` {.graphviz} --> 
-        <!-- digraph G { -->
-        <!-- 30 -> 10 -->
-        <!-- 30 -> 50 -->
-        <!-- 10 -> 5 -->
-        <!-- 10 -> n2 -->
-        <!-- 50 -> 35 -->
-        <!-- 50 -> 70 -->
-        <!-- 70 -> 65 -->
-        <!-- 70 -> 71 -->
-        <!-- 71 -> n1 -->
-        <!-- 71 -> 75 -->
-        <!-- n1 [shape=point] -->
-        <!-- n2 [shape=point] -->
-        <!-- } -->
-        <!-- ``` -->
-
-        <!-- **Passo 2**: ainda não é um caso fácil. Rotaciona de novo -->
-
-        <!-- ``` {.graphviz} --> 
-        <!-- digraph G { -->
-        <!-- 30 -> 10 -->
-        <!-- 30 -> 35 -->
-        <!-- 10 -> 5 -->
-        <!-- 10 -> n2 -->
-        <!-- 35 -> n4 -->
-        <!-- 35 -> 50 -->
-        <!-- 50 -> n3 -->
-        <!-- 50 -> 70 -->
-        <!-- 70 -> 65 -->
-        <!-- 70 -> 71 -->
-        <!-- 71 -> n1 -->
-        <!-- 71 -> 75 -->
-        <!-- n1 [shape=point] -->
-        <!-- n2 [shape=point] -->
-        <!-- n3 [shape=point] -->
-        <!-- n4 [shape=point] -->
-        <!-- } -->
-        <!-- ``` -->
-
-        <!-- **Passo 3**: caso fácil **1** de novo! Basta tirar o `50` e fazer a raiz da subárvore se o elemento `70`. --> 
-
-        <!-- ``` {.graphviz} --> 
-        <!-- digraph G { -->
-        <!-- 30 -> 10 -->
-        <!-- 30 -> 35 -->
-        <!-- 10 -> 5 -->
-        <!-- 10 -> n2 -->
-        <!-- 35 -> n4 -->
-        <!-- 35 -> 70 -->
-        <!-- 70 -> 65 -->
-        <!-- 70 -> 71 -->
-        <!-- 71 -> n1 -->
-        <!-- 71 -> 75 -->
-        <!-- n1 [shape=point] -->
-        <!-- n2 [shape=point] -->
-        <!-- n4 [shape=point] -->
-        <!-- } -->
-        <!-- ``` -->
-
-<!-- Notem que em alguns casos a remoção de um elemento fez a altura da árvore aumentar! Esse é uma das principais dificuldades em criar árvores balanceadas: quanto mais mexemos na árvore maior a chance de criarmos árvores altas. O vídeo abaixo exemplifica o algoritmo da [AVL](https://en.wikipedia.org/wiki/AVL_tree), uma árvore balanceada relativamente simples. -->
-
-<!-- ??? tip "Vídeo explicativo" -->
-    <!-- !!! video -->
-        <!-- ![](https://www.youtube.com/watch?v=zP2xbKerIds) -->
-
-<!-- ## O algoritmo `REMOVE` -->
-
-<!-- Agora que já simulou o algoritmo algumas vezes está na hora de formalizá-lo. --> 
-
-<!-- !!! exercise long -->
-    <!-- Escreva um algoritmo `REMOVE(R, K)` que remove o nó `K` da árvore `R`, devolvendo uma nova raiz da árvore se necessário. Você pode supor que as seguintes funções existem: -->
-
-    <!-- - `REMOVE-RAIZ(R)` remove a raiz de uma árvore, devolvendo a nova raiz. --> 
-
-    <!-- !!! answer -->
-        <!-- ``` -->
-        <!-- REMOVE(R, K) -->
-
-        <!-- SE R.key == K ENTÃO -->
-            <!-- DEVOLVE REMOVE-RAIZ(R) -->
-        <!-- SENÃO SE K < R.key ENTÃO -->
-            <!-- R.left = REMOVE(R.left, K) -->
-        <!-- SENÃO SE K > R.key ENTÃO -->
-            <!-- R.right = REMOVE(R.right, K) -->
-        <!-- FIM -->
-
-        <!-- DEVOLVE R -->
-        <!-- ``` -->
-
-<!-- !!! exercise long -->
-    <!-- Escreva um algoritmo recursivo `REMOVE-RAIZ(R)` que remove a raiz `R` da árvore e devolve a nova raiz. Use rotações para a direita como foi feito no exercício anterior. -->
-
-    <!-- !!! answer -->
-        <!-- Lousa -->
+[break]
 
 
-<!-- !!! warning "Desafio" -->
-    <!-- É possível fazer a remoção usando só o caso do nó escolhido ser folha. Você consegue? -->
+Notem que em alguns casos a remoção de um elemento fez a altura da árvore aumentar! Esse é uma das principais dificuldades em criar árvores balanceadas: quanto mais mexemos na árvore maior a chance de criarmos árvores altas. 
 
+::: info :::
+Algoritmo Avançado
 
-<!-- ## Prática -->
+Existem diversas árvores que se autobalanceiam como parte das operações de inserção e remoção. O vídeo abaixo explica brevemente o funcionamento da *AVL*, uma árvore balanceada relativamente simples.
 
-<!-- Implemente o algoritmo deste handout no PrairieLearn. -->
+![](qr-avl.png)
+
+:::
+
+## O algoritmo `REMOVE`
+
+Agora que já simulou o algoritmo algumas vezes está na hora de formalizá-lo. 
+
+**Exercício**: Escreva um algoritmo `REMOVE(R, K)` que remove o nó `K` da árvore `R`, devolvendo uma nova raiz da árvore se necessário. Você pode supor que as seguintes funções existem:
+
+- `REMOVE-RAIZ(R)` remove a raiz de uma árvore, devolvendo a nova raiz. 
+
+[spacer]
+
+**Exercício**: Escreva um algoritmo recursivo `REMOVE-RAIZ(R)` que remove a raiz `R` da árvore e devolve a nova raiz. Use rotações para a direita como foi feito no exercício anterior.
+
+::: warn :::
+Desafio
+
+É possível fazer a remoção usando só o caso do nó escolhido ser folha. Você consegue?
+
+:::
+
