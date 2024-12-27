@@ -21,7 +21,8 @@ function CodeBlock(block)
 
     local fname = 'temp/' .. pandoc.utils.sha1(block.text) .. '.pdf'
     local code = block.text
-    code = string.gsub(code, "graph%s+(%w+)%s+{", "graph %1 { graph[margin=0.1]")
+    code = string.gsub(code, "^(d?i?)graph%s+(%w+)%s+{", "%1graph %2 { graph[margin=0.1]\n")
+    code = string.gsub(code, "subgraph%s(%w+%d)%s?{", "subgraph %1 { margin=10\n")
     
     local success, img = pcall(img_converter, code, filetype, fname)
 

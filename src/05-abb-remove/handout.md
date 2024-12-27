@@ -1,6 +1,6 @@
 ---
-title: Algoritmos e Estruturas de Dados
-subtitle: Remoção
+title: Remoção em Árvores Binárias de Busca
+subtitle:  Algoritmos e Estruturas de Dados
 author: Igor Montagner
 ...
 
@@ -295,7 +295,7 @@ Algoritmo Avançado
 
 Existem diversas árvores que se autobalanceiam como parte das operações de inserção e remoção. O [vídeo abaixo](https://www.youtube.com/watch?v=zP2xbKerIds) explica brevemente o funcionamento da *AVL*, uma árvore balanceada relativamente simples.
 
-![](src/05-abb-remove/qr-avl.png){ width=200px }
+![](src/05-abb-remove/qr-avl.png){ width=180px }
 
 :::
 
@@ -307,16 +307,27 @@ Agora que já simulou o algoritmo algumas vezes está na hora de formalizá-lo.
 
 - `REMOVE-RAIZ(R)` remove a raiz de uma árvore, devolvendo a nova raiz. 
 
+::: done :::
+Algoritmo `REMOVE(R, K)`
+
 [spacer]
+
+:::
+
+[break]
 
 **Exercício**: Escreva um algoritmo recursivo `REMOVE-RAIZ(R)` que remove a raiz `R` da árvore e devolve a nova raiz. Use rotações para a direita como foi feito no exercício anterior.
 
+::: done :::
+Algoritmo `REMOVE-RAIZ(R)`
+
 [spacer]
+
+:::
 
 ::: warn :::
 Desafio
 
 É possível fazer a remoção usando só o caso do nó escolhido ser folha. Você consegue?
-
 :::
 

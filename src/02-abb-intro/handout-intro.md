@@ -1,6 +1,6 @@
 ---
-title: Algoritmos e Estruturas de Dados
-subtitle: Árvores Binárias de Busca 
+title: Árvores Binárias de Busca 
+subtitle: Algoritmos e Estruturas de Dados
 author: Igor Montagner
 ...
 
@@ -17,11 +17,11 @@ Vamos definir nossa linguagem para trabalhar com árvores nesta aula. Dado um n�
 - um apontador para uma subárvore esquerda $r.left$
 - um apontador para uma subárvore direita $r.right$
 
-A figura ([fonte](https://www.geeksforgeeks.org/introduction-to-tree-data-structure-and-algorithm-tutorials/) abaixo é um bom resumo do vocabulário usado em árvores.
+A figura abaixo é um bom resumo do vocabulário usado em árvores.
 
 ![Fonte: https://www.geeksforgeeks.org/introduction-to-tree-data-structure-and-algorithm-tutorials/](https://media.geeksforgeeks.org/wp-content/uploads/20221124153129/Treedatastructure.png)
 
-Uma *Árvore de Busca Binária* é umaárvore especial que guarda seus elementos em ordem crescente de $key$. Para isso ela tem a seguinte propriedade:
+Uma *Árvore de Busca Binária* é uma árvore especial que guarda seus elementos em ordem crescente de $key$. Para isso ela tem a seguinte propriedade:
 
 ::: info :::
 Propriedade básica da ABB
@@ -42,7 +42,7 @@ A busca (*query*) é a operação mais básica de uma ABB e envolve dizer se exi
 
 Faremos a busca do valor **7** na árvore abaixo. Desenhe em cima da árvore as decisões tomadas em cada nó, começando na raiz e descendo até encontrar o valor **7**.
 
-``` {.graphviz width=50%}
+``` {.graphviz width=40%}
 digraph G {
   15 -> 5
   15 -> 20
@@ -59,33 +59,10 @@ digraph G {
   null3 [shape=point]
 }
 ```
-
-
-[break]
 
 Agora faça a busca pelo valor **27**. Desenhe em cima da árvore as decisões tomadas em cada nó. O que acontece quando chegamos em um nó raiz?
 
-``` {.graphviz width=50%}
-digraph G {
-  15 -> 5
-  15 -> 20
-  5 -> 1
-  5 -> 10
-  10 -> 7
-  10 -> null1
-  20 -> null2
-  20 -> 25
-  25 -> null3
-  25 -> 30
-  null1 [shape=point]
-  null2 [shape=point]
-  null3 [shape=point]
-}
-```
-
-Agora faça a busca pelo valor **13**. Desenhe em cima da árvore as decisões tomadas em cada nó. Como descobrimos que esse valor **não** está na árvore?
-
-``` {.graphviz width=50%}
+``` {.graphviz width=40%}
 digraph G {
   15 -> 5
   15 -> 20
@@ -105,16 +82,42 @@ digraph G {
 
 [break]
 
+Agora faça a busca pelo valor **13**. Desenhe em cima da árvore as decisões tomadas em cada nó. Como descobrimos que esse valor **não** está na árvore?
+
+``` {.graphviz width=40%}
+digraph G {
+  15 -> 5
+  15 -> 20
+  5 -> 1
+  5 -> 10
+  10 -> 7
+  10 -> null1
+  20 -> null2
+  20 -> 25
+  25 -> null3
+  25 -> 30
+  null1 [shape=point]
+  null2 [shape=point]
+  null3 [shape=point]
+}
+```
+
 Vamos agora formalizar essas simulações no algoritmo `QUERY(R, K)` que busca o valor `K` na árvore enraizada em `R`.
 
-**Versão iterativa**:
+
+::: done :::
+Algoritmo (iterativo)
 
 [spacer]
 
+:::
 
-**Versão recursiva**:
+::: done :::
+Algoritmo (recursivo)
 
 [spacer]
+
+:::
 
 [break]
 
@@ -124,7 +127,7 @@ Vamos começar vendo alguns exemplos de árvores que não são *ABB*. Para cada 
 
 **Árvore 1**
 
-```{.graphviz width=50%}
+```{.graphviz width=40%}
 digraph G {
   15 -> 14
   15 -> 21
@@ -138,7 +141,7 @@ digraph G {
 
 **Árvore 2**
 
-```{.graphviz width=50%}
+```{.graphviz width=40%}
 digraph G {
   17 -> 14
   17 -> 22
@@ -169,7 +172,7 @@ Em árvores temos 3 maneiras "clássicas" de percorrer todos os nós:
 
 Note que as ordens induzem a criação de algoritmos recursivos: passar por todos os nós de uma árvore enraizada em `R` implica passar por todos os nós de outras duas árvores (seus ramos esquerdo e direito). Use a árvore abaixo para simular essas três ordens de visitação.  
 
-``` {.graphviz width=50%}
+``` {.graphviz width=40%}
 digraph G {
   15 -> 5
   15 -> 20
@@ -187,24 +190,36 @@ digraph G {
 }
 ```
 
-* **pré-ordem**:
-* **pós-ordem**:
-* **em-ordem**:
+**pré-ordem**:
+
+**pós-ordem**:
+
+**em-ordem**:
 
 [break]
 
 Formalize agora abaixo as três ordens de visitação. Indique que o nó raiz está sendo processado chamando a função auxiliar `FAZ_ALGO(R)`.
 
-**Pré-ordem**:
+::: done :::
+Algoritmo **pré-ordem**
 
 [spacer]
 
+:::
 
-**Pós-ordem**:
+::: done :::
+Algoritmo **em-ordem**
 
 [spacer]
 
-**Em-ordem**:
+:::
+
+::: done :::
+Algoritmo **pós-ordem**
+
+[spacer]
+
+:::
 
 [break]
 

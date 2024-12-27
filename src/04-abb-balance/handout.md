@@ -1,7 +1,7 @@
 
 ---
-title: Algoritmos e Estruturas de Dados
-subtitle: Balanceamento
+subtitle: Algoritmos e Estruturas de Dados
+title: Balanceamento de Árvores Binárias de Busca
 author: Igor Montagner
 ...
 
@@ -102,7 +102,7 @@ Vamos agora inserir todos valores menores que a esse elemento. No caso, serão o
 
 [spacer]
 
-::: done :::
+::: info :::
 Faz diferença pegar o elemento à esquerda ou à direita?
 
 Refaça os passos 2 a 4 pegando sempre o elemento da direita e desenha a àrvore abaixo. A altura da árvore resultante é igual ao seu desenho acima?
@@ -117,8 +117,20 @@ Refaça os passos 2 a 4 pegando sempre o elemento da direita e desenha a àrvore
 
 Agora vamos formalizar as duas partes desse algoritmo.
 
-**Algoritmo**: `TREE-TO-ARRAY(R, AUX, IDX)` recebe uma árvore `R`, um array `AUX` que com tamanho suficiente para todos os nós de `R` e `IDX` sendo o índice atual que iremos preencher em `AUX`.
+**Parte 1**: `TREE-TO-ARRAY(R, AUX, IDX)` recebe uma árvore `R`, um array `AUX` que com tamanho suficiente para todos os nós de `R` e `IDX` sendo o índice atual que iremos preencher em `AUX`. O algoritmo devolve o valor atualizado de `IDX`.
+
+::: done :::
+Algoritmo `TREE-TO-ARRAY`
 
 [spacer]
 
-**Algoritmo**: `REBALANCEIA(R)` recebe uma árvore `R` e devolve uma nova árvore balanceada `R2` contendo os mesmos valores que `R`. Você pode chamar `TREE-TO-ARRAY`.
+:::
+
+**Parte 2**: `REBALANCEIA(R)` recebe uma árvore `R` e devolve uma nova árvore balanceada `R2` contendo os mesmos valores que `R`. Você pode chamar `TREE-TO-ARRAY`.
+
+::: done :::
+Algoritmo `REBALANCEIA`
+
+[spacer]
+
+:::

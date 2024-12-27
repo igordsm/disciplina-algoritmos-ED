@@ -4,17 +4,27 @@
 \usepackage{amssymb,amsmath}
 
 \usepackage{changepage}
-\usepackage[a4paper, lmargin=0.5in, rmargin=0.5in, bmargin=0.3in, tmargin=0.5in, includefoot]{geometry}
+\usepackage[a4paper, lmargin=0.5in, rmargin=0.5in, bmargin=0.3in, tmargin=0.65in, includefoot]{geometry}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancypagestyle{plain}{}
+\fancypagestyle{first}{
+\fancyhead[L]{}
+\fancyhead[R]{}
+}
+
 
 \fancyfoot[R]{\thepage}
-\fancyfoot[L]{CC BY-NC-SA 4.0 -- \newauthor}
+\fancyfoot[L]{
+\raisebox{-0.33\height}{\includegraphics[height=2em]{templates/by-nc-sa.png}} -- © \newauthor
+}
 \renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancyhead[L]{\newtitle} 
+\fancyhead[R]{$versao$}
+
 
 \usepackage[skip=10pt plus1pt]{parskip}
 
@@ -218,13 +228,29 @@ $endfor$
 \let\newdate\@date
 \makeatother
 
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \origfigure[H]
+} {
+    \endorigfigure
+}
+
 
 \begin{document}
-
 $if(title)$
-\maketitle
+{\Huge\newtitle}
+
+{\large $subtitle$ - $versao$}
+
+Última atualização: \newdate
+% \maketitle
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
 $endif$
 
+\thispagestyle{first}
 
 $if(abstract)$
 \begin{abstract}

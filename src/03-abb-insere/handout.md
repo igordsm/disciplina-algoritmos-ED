@@ -1,6 +1,6 @@
 ---
-title: Algoritmos e Estruturas de Dados
-subtitle: Árvores Binárias de Busca 
+subtitle: Algoritmos e Estruturas de Dados
+title: Inserção em Árvores Binárias de Busca 
 author: Igor Montagner
 ...
 
@@ -10,7 +10,7 @@ Na última aula já discutimos ideias sobre a buscas em *ABB*s e vimos o que aco
 
 **Árvores com altura $h=0$**: seja $r$ esse único nó na árvore. Se $K < r.key$ então podemos só inserir na subárvore esquerda. Caso contrário ($K > r.key$), a inserção é na subárvore direita. Veja abaixo.
 
-``` {.graphviz width=70%}
+``` {.graphviz width=40%}
 digraph G {
     label=<Caso <I>h=0</I>: após inserção da chave <I>K</I>>
 
@@ -38,7 +38,7 @@ digraph G {
 
 1. só existe subárvore *esquerda* (como no exemplo abaixo) e $r.key < k$. Este caso é fácil!
 
-``` {.graphviz width=70%}
+``` {.graphviz width=40%}
 digraph D { 
 label=<Caso <I>h=1</I>: raiz só tem subárvore esquerda>
 subgraph cluster1 {
@@ -61,7 +61,7 @@ subgraph cluster2 {
 
 2. só existe subárvore **direita** e $r.key > K$. Este caso também é fácil!
 
-``` {.graphviz width=70%}
+``` {.graphviz width=40%}
 digraph D { 
 label=<Caso <I>h=1</I>: raiz só tem subárvore direita>
 subgraph cluster1 {
@@ -85,7 +85,7 @@ subgraph cluster2 {
 
 3. Existe subárvore esquerda e $r.key > K$. Ou seja, a busca iria para a esquerda em $r$, porém não podemos inserir $K$ diretamente pois já há um nó à esquerda de $r$. 
 
-``` {.graphviz width=30%}
+``` {.graphviz width=15%}
 digraph G {
 r -> E
 r -> null1
@@ -95,7 +95,7 @@ null1[shape=point]
 
 4. Existe subárvore direita e $r.key < K$. Esse caso também não é óbvio. A busca iria para a direita em $r$, porém a mesma situação acima ocorre mas desta vez para a direita. 
 
-``` {.graphviz width=30%}
+``` {.graphviz width=15%}
 digraph G {
 r -> null1
 r -> D
@@ -108,7 +108,7 @@ Os casos 1 e 2 já estão resolvidos e são fáceis: é possível inserir o nó 
 
 **Árvores com altura $h > 1$**: Usar o argumento acima nos permite inserir em árvores de qualquer tamanho! Ou a inserção ocorreria em um espaço vazio (ou seja, um dos lados tem uma subárvore de altura 0) ou inserimos na subárvore correspondente (que tem altura $h-1$).
 
-::: done :::
+::: info :::
 Esse algoritmo acaba?
 
 Qual o número máximo de passos que esse algoritmo fará em uma árvore com $N$ nós? E se dissermos que a altura dessa árvore é $h$, conseguimos uma estimativa mais justa?
@@ -179,15 +179,23 @@ digraph G{
 
 ## Algoritmo para inserção
 
-**Exercício**: Agora formalize o algoritmo `insere(r, K)` que aplicamos nos exemplos acima. Escreva um algoritmo iterativo nesta questão.
+Vamos agora formalizar o algoritmo `INSERE(r, K)`. Esse algoritmo devolve a raiz da árvore `r`.
+
+::: done :::
+Algoritmo iterativo
 
 [spacer]
 
-**Exercício**: Agora formalize o algoritmo `insere(r, K)` que aplicamos nos exemplos acima. Escreva um algoritmo recursivo nesta questão.
+:::
+
+::: done :::
+Algoritmo recursivo
 
 [spacer]
 
+:::
 
+[break]
 
 ## Ordem de inserção e altura da árvore
 
@@ -208,9 +216,11 @@ digraph G{
 }
 ```
 
-**Exercício**: Para a árvore acima, tente encontrar uma ordem de inserção que cria uma árvore de altura  
+**Exercício**: Para a árvore acima, tente encontrar uma ordem de inserção que cria uma árvore de altura 3. Escreva-a abaixo.
 
-::: done :::
+Resposta: 
+
+::: info :::
 Reflexões
 
 Por fim, faça as seguintes reflexões e anote os resultados abaixo
