@@ -34,7 +34,7 @@ digraph D {
 
 Outro caso fácil é quando **o elemento a ser removido não tem um dos filhos**. Veja abaixo os dois casos possíveis.
 
-``` {.graphviz width=40%} 
+``` {.graphviz width=35%} 
 digraph D {
     label="Remoção do elemento 10 - sem filho esquerdo"
     subgraph cluster1 {
@@ -64,7 +64,7 @@ digraph D {
 }
 ```
 
-``` {.graphviz width=40%} 
+``` {.graphviz width=35%} 
 digraph D {
     label="Remoção do elemento 10 - sem filho direito"
     subgraph cluster1 {
@@ -100,7 +100,7 @@ Agora falta só descobrir o que fazer quando o nó a ser removido tem ambos os f
 
 O caso mais simples com dois filhos é a árvore balanceada com 3 elementos e fazendo a remoção do elemento raiz (`10` no exemplo abaixo)
 
-``` {.graphviz width=30%} 
+``` {.graphviz width=15%} 
 digraph G {
 10 -> 5
 10 -> 15
@@ -115,7 +115,7 @@ Para conseguirmos chegar em um caso fácil precisaríamos fazer o `10` virar
 
 **Exercício**: Redesenhe a árvore acima fazendo com que o nó `10` esteja em cada uma das três posições acima. 
 
-[spacer]
+[break]
 
 Note que nos 3 casos o nó `10` *desceu de nível na árvore.* Ele inicia na raiz (nível 0) e desce para o nível 1 (nos casos 1 e 2) e nível 2 (no caso 3). 
 
@@ -128,15 +128,15 @@ Se o seu nó `10` não está nessas posições chame o professor ou valide com a
 
 **Exercício**: Em uma árvore com altura $h = 10$, qual é o número máximo de rotações necessárias para fazer um nó qualquer da árvore se tornar uma folha?
 
-\vspace{1em}
+\vspace{2em}
 
 Conseguimos descer um nó de nível fazendo uma **rotação** na árvore. Usaremos como referência a árovre abaixo e rodaremos o nó `10` à direita.  
 Iremos agora nomear alguns nós (e subárvores) para facilitar nossa vida. 
 
-``` {.graphviz}
+``` {.graphviz width=30%}
 graph G {
-    R -- 10
-    R -- 20
+    18 -- 10
+    18 -- 20
     10 -- 5
     10 -- 15
     5 -- 2
@@ -150,28 +150,39 @@ graph G {
 
 **Passo 1**: conectar o nó `10` (raiz antiga)  à *direita* do nó `5` (pivô). Isso implica em desconectar a subárvore enraizada no nó `7` ($\beta$), que por enquanto está desconectado do resto da árvore.
 
-``` {.graphviz}
+``` {.graphviz width=30%}
 graph G {
-    R -- 10
-    R -- 20
-    5 -- 2
-    5 -- 10
-    10 -- n1
-    10 -- 15
-    7
-    n1[shape=poiny]
+5
+18
+2
+10
+20
+7
+n1[shape=point]
+
+18 -- 10
+5 -- 2
+5 -- 10
+18 -- 20
+
+10 -- 15
+10 -- n1
 }
 ```
 
 **Passo 2**: Agora conectamos a subárvore enraizada em `7` ($\beta$) à *esquerda* do nó `10` (antiga raiz).
 
-``` {.graphviz}
+``` {.graphviz width=30%}
 graph G {
-    2
-    5 
-    10
-    R -- 10
-    R -- 20
+5
+18
+2
+10
+20
+7
+
+    18 -- 10
+    18 -- 20
     5 -- 2
     5 -- 10
     10 -- 7
@@ -179,12 +190,12 @@ graph G {
 }
 ```
 
-**Passo 3**: agora tornamos o nó `5` (pivô) a raiz dessa árvore, conectando o pai do `10` (antiga raiz) ao nó `5`.
+**Passo 3**: agora tornamos o nó `5` (pivô) a raiz dessa árvore, conectando-o ao nó `18` (antigo pai do `10`).
 
-``` {.graphviz}
+``` {.graphviz width=30%}
 graph G {
-    R -- 5
-    R -- 20
+    18 -- 5
+    18 -- 20
     5 -- 2
     5 -- 10
     10 -- 7
@@ -211,7 +222,9 @@ Formalize a explicação acima em um algoritmo chamado `ROTAÇÃO-DIREITA(R)` qu
 
 :::
 
-Use a árvore abaixo para testar seu algoritmo e tentar realizar rotações nos seguintes nós: 
+[break]
+
+**Exercício**: Use a árvore abaixo para testar seu algoritmo e tentar realizar rotações nos seguintes nós: 
 
 - `6, 50, 30`.
 
@@ -253,7 +266,7 @@ Agora que conseguimos "descer" um elemento de nível, temos um algoritmo de remo
 
 Vamos simular essa ideia para o grafo abaixo. Todas as rotações serão feitas para a direita. 
 
-``` {.graphviz} 
+``` {.graphviz width=50%} 
 digraph G {
 50 -> 30
 50 -> 70
@@ -280,9 +293,9 @@ Notem que em alguns casos a remoção de um elemento fez a altura da árvore aum
 ::: info :::
 Algoritmo Avançado
 
-Existem diversas árvores que se autobalanceiam como parte das operações de inserção e remoção. O vídeo abaixo explica brevemente o funcionamento da *AVL*, uma árvore balanceada relativamente simples.
+Existem diversas árvores que se autobalanceiam como parte das operações de inserção e remoção. O [vídeo abaixo](https://www.youtube.com/watch?v=zP2xbKerIds) explica brevemente o funcionamento da *AVL*, uma árvore balanceada relativamente simples.
 
-![](qr-avl.png)
+![](src/05-abb-remove/qr-avl.png){ width=200px }
 
 :::
 
@@ -297,6 +310,8 @@ Agora que já simulou o algoritmo algumas vezes está na hora de formalizá-lo.
 [spacer]
 
 **Exercício**: Escreva um algoritmo recursivo `REMOVE-RAIZ(R)` que remove a raiz `R` da árvore e devolve a nova raiz. Use rotações para a direita como foi feito no exercício anterior.
+
+[spacer]
 
 ::: warn :::
 Desafio

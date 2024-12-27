@@ -3,40 +3,26 @@
 % ams
 \usepackage{amssymb,amsmath}
 
+\usepackage{changepage}
+\usepackage[a4paper, lmargin=0.5in, rmargin=0.5in, bmargin=0.3in, tmargin=0.5in, includefoot]{geometry}
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \fancypagestyle{plain}{}
 
-
-\usepackage[a4paper, lmargin=0.5in, rmargin=2in, bmargin=1in, includefoot]{geometry}
-% \usepackage[a4paper, total={3in, 8in}]{geometry}
+\fancyfoot[R]{\thepage}
+\fancyfoot[L]{CC BY-NC-SA 4.0 -- \newauthor}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
 \usepackage[skip=10pt plus1pt]{parskip}
 
 
-\usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
-  \usepackage[utf8]{inputenc}
-$if(euro)$
-  \usepackage{eurosym}
-$endif$
-\else % if luatex or xelatex
-  \makeatletter
-  \@ifpackageloaded{fontspec}{}{\usepackage{fontspec}}
-  \makeatother
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-  \makeatletter
-  \@ifpackageloaded{soul}{
-     \renewcommand\allcapsspacing[1]{{\addfontfeature{LetterSpace=15}#1}}
-     \renewcommand\smallcapsspacing[1]{{\addfontfeature{LetterSpace=10}#1}}
-   }{}
-  \makeatother
-$if(euro)$
-  \newcommand{\euro}{€}
-$endif$
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
 
 $if(mainfont)$
     \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
@@ -54,7 +40,6 @@ $if(CJKmainfont)$
     \usepackage{xeCJK}
     \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
 $endif$
-\fi
 
 % graphix
 \usepackage{graphicx}
@@ -169,14 +154,6 @@ $endif$
 \usepackage{morefloats}
 
 \usepackage{float}
-\let\origfigure\figure
-\let\endorigfigure\endfigure
-\renewenvironment{figure}[1][2] {
-    \origfigure[H]
-} {
-    \endorigfigure
-}
-
 \usepackage{tcolorbox}
 
 \definecolor{green}{HTML}{a1c3a1}
@@ -186,7 +163,7 @@ $endif$
   colback=white,
   arc=0mm,
   title=#1,
-  width=0.9\textwidth
+  width=0.8\textwidth
 }
 
 \definecolor{blueish}{HTML}{b5c1ea}
@@ -196,9 +173,19 @@ $endif$
   colback=white,
   arc=0mm,
   title=#1,
-  width=0.9\textwidth
+  width=0.8\textwidth
 }
 
+
+\definecolor{yellow}{HTML}{FFF59D}
+\newtcolorbox{boxYellow}[1]{%
+  colframe=yellow, 
+  coltitle=black,
+  colback=white,
+  arc=0mm,
+  title=#1,
+  width=0.8\textwidth
+}
 
 $if(ctex)$
 \usepackage{ctexcap}
@@ -234,15 +221,10 @@ $endfor$
 
 \begin{document}
 
-\fancyfoot{} % clear all footer fields
-\fancyfoot[R]{\thepage}
-\fancyfoot[L]{CC BY-NC-SA 4.0 -- \newauthor}
-
 $if(title)$
 \maketitle
 $endif$
 
-\pagestyle{fancy}
 
 $if(abstract)$
 \begin{abstract}
@@ -270,7 +252,9 @@ $if(lof)$
 \listoffigures
 $endif$
 
+\begin{adjustwidth}{0pt}{10em}
 $body$
+\end{adjustwidth}
 
 $if(natbib)$
 $if(bibliography)$

@@ -21,7 +21,8 @@ function Div(d)
   local colors = {
     tip = "Blue",
     info = "Blue",
-    done = "Green"
+    done = "Green",
+    warn = "Yellow"
   }
   
   local c = colors[d.classes[1]]

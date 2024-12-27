@@ -20,7 +20,10 @@ function CodeBlock(block)
     end
 
     local fname = 'temp/' .. pandoc.utils.sha1(block.text) .. '.pdf'
-    local success, img = pcall(img_converter, block.text, filetype, fname)
+    local code = block.text
+    code = string.gsub(code, "graph%s+(%w+)%s+{", "graph %1 { graph[margin=0.1]")
+    
+    local success, img = pcall(img_converter, code, filetype, fname)
 
     if not success then
         io.stderr:write(tostring(img))
@@ -28,9 +31,9 @@ function CodeBlock(block)
         error 'Image conversion failed. Aborting.'
     end
     return {
-      pandoc.RawInline('latex', '\\hfill\\break{\\centering'),
+      pandoc.RawInline('latex', '\\centerline{'),
       pandoc.Image({}, fname, '', block.attr),
-      pandoc.RawInline('latex', '\\par}')
+      pandoc.RawInline('latex', '}')
 
     } 
 end

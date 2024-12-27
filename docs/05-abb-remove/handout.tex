@@ -1,0 +1,405 @@
+\documentclass[]{article}
+
+% ams
+\usepackage{amssymb,amsmath}
+
+\usepackage{changepage}
+\usepackage[a4paper, lmargin=0.5in, rmargin=0.5in, bmargin=1in, includefoot]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancypagestyle{plain}{}
+
+
+\fancyfoot{} % clear all footer fields
+\fancyfoot[R]{\thepage}
+\fancyfoot[L]{CC BY-NC-SA 4.0 -- \newauthor}
+
+
+\usepackage[skip=10pt plus1pt]{parskip}
+
+
+\usepackage{fixltx2e} % provides \textsubscript
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+
+% graphix
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+
+% booktabs
+\usepackage{booktabs}
+
+% url
+\usepackage{url}
+
+% hyperref
+\usepackage{hyperref}
+
+% units.
+\usepackage{units}
+
+
+\setcounter{secnumdepth}{-1}
+
+% citations
+
+
+% pandoc syntax highlighting
+
+% table with pandoc
+
+% multiplecol
+\usepackage{multicol}
+
+% strikeout
+\usepackage[normalem]{ulem}
+
+% morefloats
+\usepackage{morefloats}
+
+\usepackage{float}
+% \let\origfigure\figure
+% \let\endorigfigure\endfigure
+% \renewenvironment{figure}[1][2] {
+%     \origfigure[H]
+% } {
+%     \endorigfigure
+% }
+
+\usepackage{tcolorbox}
+
+\definecolor{green}{HTML}{a1c3a1}
+\newtcolorbox{boxGreen}[1]{%
+  colframe=green, 
+  coltitle=black,
+  colback=white,
+  arc=0mm,
+  title=#1,
+  width=0.8\textwidth
+}
+
+\definecolor{blueish}{HTML}{b5c1ea}
+\newtcolorbox{boxBlue}[1]{%
+  colframe=blueish, 
+  coltitle=black,
+  colback=white,
+  arc=0mm,
+  title=#1,
+  width=0.8\textwidth
+}
+
+
+\definecolor{yellow}{HTML}{FFF59D}
+\newtcolorbox{boxYellow}[1]{%
+  colframe=yellow, 
+  coltitle=black,
+  colback=white,
+  arc=0mm,
+  title=#1,
+  width=0.8\textwidth
+}
+
+
+% tightlist macro required by pandoc >= 1.14
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% title / author / date
+\title{Algoritmos e Estruturas de Dados}
+\author{Igor Montagner}
+\date{sex 27 dez 2024 09:11:59 -03}
+
+
+\makeatletter
+\let\newtitle\@title
+\let\newauthor\@author
+\let\newdate\@date
+\makeatother
+
+
+\begin{document}
+
+\setlength{\textfloatsep}{0pt}
+\setlength{\intextsep}{0pt}
+\setlength{\floatsep}{0pt}
+
+bla
+
+\maketitle
+
+
+
+
+
+\begin{adjustwidth}{0pt}{10em}
+Remover elementos de árvores é uma operação mais complicada que inserção
+e busca. Esta aula será auto-guiada: os exemplos e exercícios devem
+levá-los à construção de um algoritmo para remoção de nós de uma árvore
+usando operações de rotação (que definiremos a seguir).
+
+Os algoritmos serão comentados na próxima aula.
+
+\subsection{Casos fáceis da
+remoção}\label{casos-fuxe1ceis-da-remouxe7uxe3o}
+
+O caso mais fácil é quando \textbf{o elemento a ser removido é uma
+folha}.
+
+\hfill\break{\centering
+
+\includegraphics[width=0.4\textwidth,height=\textheight]{temp/78aa3757adbf4f1702455314f29176682b5aebce.pdf}
+
+\par}
+
+Outro caso fácil é quando \textbf{o elemento a ser removido não tem um
+dos filhos}. Veja abaixo os dois casos possíveis.
+
+\hfill\break{\centering
+
+\includegraphics[width=0.4\textwidth,height=\textheight]{temp/d96c55d63d8544996aa00b8a173edf5811ac7c70.pdf}
+
+\par}
+
+\hfill\break{\centering
+
+\includegraphics[width=0.4\textwidth,height=\textheight]{temp/7d4272904e4cc781eb1ff95ba3347e4483618df6.pdf}
+
+\par}
+
+\subsection{O caso complicado: nó tem dois
+filhos}\label{o-caso-complicado-nuxf3-tem-dois-filhos}
+
+Agora falta só descobrir o que fazer quando o nó a ser removido tem
+ambos os filhos. Apesar de isso parecer complicado. Veremos como aplicar
+operações na árvore de maneira que sempre chegaremos em um caso fácil!
+
+O caso mais simples com dois filhos é a árvore balanceada com 3
+elementos e fazendo a remoção do elemento raiz (\texttt{10} no exemplo
+abaixo)
+
+\hfill\break{\centering
+
+\includegraphics[width=0.3\textwidth,height=\textheight]{temp/eefcf1bf3546da377cd625809b21de28cf30c81c.pdf}
+
+\par}
+
+Para conseguirmos chegar em um caso fácil precisaríamos fazer o
+\texttt{10} virar
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  ou um nó com filho direito e sem filho esquerdo
+\item
+  ou um nó com filho esquerdo e sem filho direito
+\item
+  ou uma folha
+\end{enumerate}
+
+\textbf{Exercício}: Redesenhe a árvore acima fazendo com que o nó
+\texttt{10} esteja em cada uma das três posições acima.
+
+\vspace{15em}
+
+Note que nos 3 casos o nó \texttt{10} \emph{desceu de nível na árvore.}
+Ele inicia na raiz (nível 0) e desce para o nível 1 (nos casos 1 e 2) e
+nível 2 (no caso 3).
+
+\begin{boxYellow}{Atenção}
+
+Se o seu nó \texttt{10} não está nessas posições chame o professor ou
+valide com algum colega que já fez esse exercício
+
+\end{boxYellow}
+
+\textbf{Exercício}: Em uma árvore com altura \(h = 10\), qual é o número
+máximo de rotações necessárias para fazer um nó qualquer da árvore se
+tornar uma folha?
+
+\vspace{1em}
+
+Conseguimos descer um nó de nível fazendo uma \textbf{rotação} na
+árvore. Usaremos como referência a árovre abaixo e rodaremos o nó
+\texttt{10} à direita.\\
+Iremos agora nomear alguns nós (e subárvores) para facilitar nossa vida.
+
+\hfill\break{\centering
+
+\includegraphics{temp/592d5d4cb41a4460928f8e0adb25e182760d3531.pdf}
+
+\par}
+
+\begin{itemize}
+\tightlist
+\item
+  o nó \texttt{10} será a raiz antiga
+\item
+  o nó \texttt{5} será o pivô
+\item
+  a subárvore enraizada no nó \texttt{7} será chamada de \(\beta\)
+\end{itemize}
+
+\textbf{Passo 1}: conectar o nó \texttt{10} (raiz antiga) à
+\emph{direita} do nó \texttt{5} (pivô). Isso implica em desconectar a
+subárvore enraizada no nó \texttt{7} (\(\beta\)), que por enquanto está
+desconectado do resto da árvore.
+
+\hfill\break{\centering
+
+\includegraphics{temp/acc04fb1d3386e96061de43731819377adf61865.pdf}
+
+\par}
+
+\textbf{Passo 2}: Agora conectamos a subárvore enraizada em \texttt{7}
+(\(\beta\)) à \emph{esquerda} do nó \texttt{10} (antiga raiz).
+
+\hfill\break{\centering
+
+\includegraphics{temp/0ada2e6f97ed21887d30883f93090b44524c8a89.pdf}
+
+\par}
+
+\textbf{Passo 3}: agora tornamos o nó \texttt{5} (pivô) a raiz dessa
+árvore, conectando o pai do \texttt{10} (antiga raiz) ao nó \texttt{5}.
+
+\hfill\break{\centering
+
+\includegraphics{temp/a58a942dea6399ee8c31984c57c0f8950c4bad1a.pdf}
+
+\par}
+
+\begin{boxYellow}{Importante}
+
+Em todos os passos a árvore fica ``torta'' e tem problemas.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  No passo 1, a subárvore enraizada no nó \texttt{7} (\(\beta\)) ficou
+  desconectada do resto da árvore.
+\item
+  No passo 2, o nó \texttt{10} tem dois predecessores, enquanto o nó
+  \texttt{5} não tem nenhum.
+\end{enumerate}
+
+Isso é normal. Nosso objetivo é deixá-la perfeita somente após o passo
+3.
+
+\end{boxYellow}
+
+\begin{boxGreen}{Algoritmo}
+
+Formalize a explicação acima em um algoritmo chamado
+\texttt{ROTAÇÃO-DIREITA(R)} que o executa e devolve a nova raiz após a
+rotação
+
+\vspace{15em}
+
+\end{boxGreen}
+
+Use a árvore abaixo para testar seu algoritmo e tentar realizar rotações
+nos seguintes nós:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{6,\ 50,\ 30}.
+\end{itemize}
+
+\hfill\break{\centering
+
+\includegraphics[width=0.4\textwidth,height=\textheight]{temp/fdf2a9625258a0771d4760cb672897bcb40837ce.pdf}
+
+\par}
+
+\pagebreak
+
+\subsection{Algoritmo para remoção}\label{algoritmo-para-remouxe7uxe3o}
+
+Agora que conseguimos ``descer'' um elemento de nível, temos um
+algoritmo de remoção baseado em rotações que é bem simples:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  encontre o nó a ser removido
+\item
+  rotacione a árvore para a direita até que esse nó esteja em um dos 3
+  casos fáceis acima.
+\item
+  remova o nó de acordo com as explicações dos 3 casos fáceis
+\item
+  devolva a nova raiz da subárvore que iniciava no elemento removido
+\end{enumerate}
+
+Vamos simular essa ideia para o grafo abaixo. Todas as rotações serão
+feitas para a direita.
+
+\hfill\break{\centering
+
+\includegraphics{temp/ab35faa4958a5e1b6d39213393bef2d6e9c18316.pdf}
+
+\par}
+
+\textbf{Exercício}: Simule a remoção dos elementos \texttt{10,\ 70,\ 50}
+da árvore acima. Em cada simulação, sempre comece da árvore acima.
+
+\pagebreak
+
+Notem que em alguns casos a remoção de um elemento fez a altura da
+árvore aumentar! Esse é uma das principais dificuldades em criar árvores
+balanceadas: quanto mais mexemos na árvore maior a chance de criarmos
+árvores altas.
+
+\begin{boxBlue}{Algoritmo Avançado}
+
+Existem diversas árvores que se autobalanceiam como parte das operações
+de inserção e remoção. O vídeo abaixo explica brevemente o funcionamento
+da \emph{AVL}, uma árvore balanceada relativamente simples.
+
+\includegraphics{qr-avl.png}
+
+\end{boxBlue}
+
+\subsection{\texorpdfstring{O algoritmo
+\texttt{REMOVE}}{O algoritmo REMOVE}}\label{o-algoritmo-remove}
+
+Agora que já simulou o algoritmo algumas vezes está na hora de
+formalizá-lo.
+
+\textbf{Exercício}: Escreva um algoritmo \texttt{REMOVE(R,\ K)} que
+remove o nó \texttt{K} da árvore \texttt{R}, devolvendo uma nova raiz da
+árvore se necessário. Você pode supor que as seguintes funções existem:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{REMOVE-RAIZ(R)} remove a raiz de uma árvore, devolvendo a nova
+  raiz.
+\end{itemize}
+
+\vspace{15em}
+
+\textbf{Exercício}: Escreva um algoritmo recursivo
+\texttt{REMOVE-RAIZ(R)} que remove a raiz \texttt{R} da árvore e devolve
+a nova raiz. Use rotações para a direita como foi feito no exercício
+anterior.
+
+\begin{boxYellow}{Desafio}
+
+É possível fazer a remoção usando só o caso do nó escolhido ser folha.
+Você consegue?
+
+\end{boxYellow}
+\end{adjustwidth}
+
+
+
+\end{document}
