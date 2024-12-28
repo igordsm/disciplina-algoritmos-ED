@@ -44,7 +44,9 @@ Atividades de aula estão organizadas em grandes tópicos que serão abordados e
 
 ## Introdução a Programação em C
 
-Todos os materias estão no site dos [Labs de C](https://insper.github.io/Labs-de-C).
+Os materiais iniciais estão no site dos [Labs de C](https://insper.github.io/Labs-de-C). 
+
+**Alocação de memória**: [handout](01-c/handout.pdf) / [slides](01-c/slides.pdf)
 
 ## Árvores Binárias de Busca
 
