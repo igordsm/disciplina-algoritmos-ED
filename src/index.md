@@ -70,14 +70,12 @@ Os seguintes exercícios do leetcode são interessantes e relacionados ao assunt
 
 ## Grafos
 
-### Grafos: definições e implementação em C
 
-sdf
+| Aula           | Materiais                                                                           |
+| --             | ---                                                                                 |
+| Introdução     | [Slides](06-grafos-intro/slides.pdf) / [Handout](06-grafos-intro/handout.pdf) |
 
-### Grafos: Busca em Profundidade
 
-sfdsf
+### Exercícios extras
 
-### Grafos: Caminhos mínimos
-
-sldkfjsldk
+Os seguintes exercícios do leetcode são interessantes e relacionados ao assunto atual.
