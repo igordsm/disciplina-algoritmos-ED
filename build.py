@@ -25,7 +25,7 @@ else:
 sh('mkdir -p temp')
 
 for f in all_files:
-    fname = osp.split(f)[1]
+    dir, fname = osp.split(f)
     without_src = "docs" / f.relative_to('src')
     
 
@@ -39,7 +39,7 @@ for f in all_files:
             print(resname)
         else:
             print('Handout', f)
-        sh(f'{PANDOC_HANDOUT} {PANDOC_VARS} {f} -o {resname}')
+        sh(f'{PANDOC_HANDOUT} {PANDOC_VARS} --resource-path {dir} {f} -o {resname}')
     elif fname.endswith('.md') and 'slide' in fname:
         resname = without_src.parent / fname.replace('.md', '.pdf')
         if show_file_list:
@@ -53,7 +53,7 @@ for f in all_files:
             print(resname)
         else:
             print('Page', f)
-        sh(f'{PANDOC_PAGE} {PANDOC_VARS} {f} -o {resname}')
+        sh(f'{PANDOC_PAGE} {PANDOC_VARS} --resource-path {dir} {f} -o {resname}')
     else:
         if show_file_list:
             print(resname)

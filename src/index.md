@@ -71,9 +71,10 @@ Os seguintes exercícios do leetcode são interessantes e relacionados ao assunt
 ## Grafos
 
 
-| Aula           | Materiais                                                                           |
-| --             | ---                                                                                 |
-| Introdução     | [Slides](06-grafos-intro/slides.pdf) / [Handout](06-grafos-intro/handout.pdf) |
+| Aula                       | Materiais                                                                           |
+| --                         | ---                                                                                 |
+| Introdução                 | [Slides](06-grafos-intro/slides.pdf) / [Handout](06-grafos-intro/handout.pdf)       |
+| Representação Computacional| [Handout](06-grafos-intro/handout-repr-computacional.pdf)                           |
 
 
 ### Exercícios extras
