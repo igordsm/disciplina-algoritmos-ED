@@ -8,8 +8,7 @@ footer: 'Igor Montagner (igorsm1@insper.edu.br)'
 
 # Introdução a Grafos
 
-## Grafos e Árvores
-
+## Algoritmos e Estruturas de Dados
 
 --------
 

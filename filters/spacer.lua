@@ -11,6 +11,10 @@ function Para(par)
       -- return pandoc.RawInline('html', '<div class="spacer-medium"></div>')
       return pandoc.RawInline('latex', '\\vspace{3em}')
     end
+    if el.t == 'Str' and el.text == "[big-spacer]" then
+      -- return pandoc.RawInline('html', '<div class="spacer-medium"></div>')
+      return pandoc.RawInline('latex', '\\vspace{25em}')
+    end
     
     if el.t == 'Str' and el.text == "[break]" then
       -- return pandoc.RawInline('html', '<div class="page-break"></div>')

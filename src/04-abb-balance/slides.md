@@ -6,9 +6,9 @@ footer: 'Igor Montagner (igorsm1@insper.edu.br)'
 
 <script src=https://unpkg.com/graphviz-webcomponent@2.0.0/dist/graph-bundled.min.js></script>
 
-# Grafos e Árvores
+# Balanceamento de ABBs
 
-## Balanceamento de ABBs
+## Algoritmos e Estruturas de Dados
 
 --------
 

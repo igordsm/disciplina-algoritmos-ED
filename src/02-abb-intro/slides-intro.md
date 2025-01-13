@@ -3,9 +3,10 @@ footer: 'Igor Montagner (igorsm1@insper.edu.br)'
 ---
 
 <!-- _class: front -->
-# Grafos e Árvores
 
-## Árvores Binária de Busca
+# Árvores Binária de Busca
+
+## Algoritmos e Estruturas de Dados
 
 --------
 
