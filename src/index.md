@@ -29,6 +29,8 @@ Teremos os seguinte itens de avaliação
 - $P1$ - prova de árvores 
 - $P2$ - prova de grafos
 
+A nota final $NF$ é calculada da seguinte maneira. 
+
 $$
 NF = 0.2 \times PL + P1 \times 0.3 + P2 \times 0.5
 $$
