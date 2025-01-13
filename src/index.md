@@ -21,9 +21,19 @@ Links importantes:
 - [Plano de aulas](./plano-de-aulas.xlsx)
 - [Calendário acadêmico](https://portaldoprofessor.insper.edu.br/wp-content/uploads/2024/12/CALENDARIO-GRADUACAO-_-PROVAS-GERAIS-_-USO-INTERNO.pdf)
 
-Avaliações
+# Avaliações
 
-bla
+Teremos os seguinte itens de avaliação
+
+- $PL$ - média de todos os exercícios no PrairieLearn
+- $P1$ - prova de árvores 
+- $P2$ - prova de grafos
+
+$$
+NF = 0.2 \times PL + P1 \times 0.3 + P2 \times 0.5
+$$
+
+Com a condição de que $P1 \times 0.3 + P2 \times 0.5 \geq 4.5$. 
 
 # Como usar o material
 
