@@ -83,11 +83,12 @@ Os seguintes exercícios do leetcode são interessantes e relacionados ao assunt
 ## Grafos
 
 
-| Aula                       | Materiais                                                                           |
-| --                         | ---                                                                                 |
-| Introdução                 | [Slides](06-grafos-intro/slides.pdf) / [Handout](06-grafos-intro/handout.pdf)       |
-| Representação Computacional| [Handout](06-grafos-intro/handout-repr-computacional.pdf)                           |
-| Componentes conexos        | [Slides](07-dfs/slides.pdf) [Handout](07-dfs/handout.pdf)                           |
+| Aula                       | Materiais                                                                             |
+| --                         | ---                                                                                   |
+| Introdução                 | [Slides](06-grafos-intro/slides.pdf) / [Handout](06-grafos-intro/handout.pdf)         |
+| Representação Computacional| [Handout](06-grafos-intro/handout-repr-computacional.pdf)                             |
+| Componentes conexos        | [Slides](07-dfs/slides.pdf) / [Handout](07-dfs/handout.pdf)                           |
+| Caminhos mínimos           | [Slides](08-bfs/slides.pdf) / [Handout](08-bfs/handout.pdf)                           |
 
 
 ### Exercícios extras
