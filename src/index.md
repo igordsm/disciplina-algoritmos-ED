@@ -9,17 +9,13 @@ Bem vindo ao material de Algoritmos e Estruturas de Dados!
 
 - **Professor** Igor Montagner
 - **Alunos**:
-  - Eduardo Vaz
-  - Livia Tanaka
-
-# Burocracias
-
-Links importantes:
-
-- Avisos (blackboard)
-- [Exercícios (prairie learn)](https://us.prairielearn.com/pl/course_instance/170365)
-- [Plano de aulas](./plano-de-aulas.xlsx)
-- [Calendário acadêmico](https://portaldoprofessor.insper.edu.br/wp-content/uploads/2024/12/CALENDARIO-GRADUACAO-_-PROVAS-GERAIS-_-USO-INTERNO.pdf)
+  - Ana Helena Caiafa
+  - Ian Cordibello Desponds
+- **Links importantes**:
+  - Avisos (blackboard)
+  - [Exercícios (prairie learn)](https://us.prairielearn.com/pl/course_instance/170365)
+  - [Plano de aulas](./plano-de-aulas.xlsx)
+  - [Calendário acadêmico](https://portaldoprofessor.insper.edu.br/wp-content/uploads/2024/12/CALENDARIO-GRADUACAO-_-PROVAS-GERAIS-_-USO-INTERNO.pdf)
 
 # Avaliações
 
