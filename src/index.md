@@ -63,7 +63,7 @@ Os materiais iniciais estão no site dos [Labs de C](https://insper.github.io/La
 | Introdução     | [Slides](02-abb-intro/slides-intro.pdf) / [Handout](02-abb-intro/handout-intro.pdf) |
 | Inserção       | [Handout](03-abb-insere/handout.pdf)                                                |
 | Balanceamento  | [Slides](04-abb-balance/slides.pdf) / [Handout](04-abb-balance/handout.pdf)         |
-| Remoção        | [Slides](05-abb-remove/slides.pdf) / [Handout](05-abb-remove/handout.pdf)           |
+| Remoção        | [Slides](05-abb-remove/slides.pdf) / [Handout](05-abb-remove/handout.pdf) / [Vídeo Remoção](https://youtu.be/YzSuUj54Mo0)           |
 
 
 ### Exercícios extras
