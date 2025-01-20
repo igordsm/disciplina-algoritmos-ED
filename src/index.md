@@ -12,7 +12,7 @@ Bem vindo ao material de Algoritmos e Estruturas de Dados!
   - Ana Helena Caiafa
   - Ian Cordibello Desponds
 - **Links importantes**:
-  - Avisos (blackboard)
+  - [Avisos (blackboard)](https://insper.blackboard.com/ultra/courses/_49978_1/announcements)
   - [Exercícios (prairie learn)](https://us.prairielearn.com/pl/course_instance/170365)
   - [Plano de aulas](./plano-de-aulas.xlsx)
   - [Calendário acadêmico](https://portaldoprofessor.insper.edu.br/wp-content/uploads/2024/12/CALENDARIO-GRADUACAO-_-PROVAS-GERAIS-_-USO-INTERNO.pdf)
