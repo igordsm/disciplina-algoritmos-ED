@@ -7,6 +7,8 @@ Bem vindo ao material de Algoritmos e Estruturas de Dados!
 
 ## Avisos
 
+**01/02**: Nesta disciplina, é proibida a utilização de ferramentas e plugins de IA generativa (IAg) em todas as atividades, pois a avaliação dos objetivos de aprendizagem é baseada no raciocínio lógico do próprio aluno.
+
 **18/02**: Na semana do dia *24/02* estarei viajando. Durante as aulas o Ian e a Ana Helena estarão na sala de reunião 03 no 3o andar do P2 (atrás do HelpDesk) para tirar dúvidas da disciplina. **Aproveitem esses horários, pois quando eu voltar já começamos com inserção!**
 
 # Equipe
