@@ -5,6 +5,10 @@ subtitle: 2025.1
 
 Bem vindo ao material de Algoritmos e Estruturas de Dados!
 
+## Avisos
+
+**18/02**: Na semana do dia *24/02* estarei viajando. Durante as aulas o Ian e a Ana Helena estarão na sala de reunião 03 no 3o andar do P2 (atrás do HelpDesk) para tirar dúvidas da disciplina. **Aproveitem esses horários, pois quando eu voltar já começamos com inserção!**
+
 # Equipe
 
 - **Professor** Igor Montagner
@@ -41,10 +45,16 @@ Nossas aulas estão divididas em 3 materiais principais:
 2. **handouts** contendo atividades feitas em aula e explicações adicionais. Estão em formato PDF. É possível usar tanto impresso quanto anotando o PDF digitalmente.
 3. **exercícios conceituais** no PrairieLearn específicos para cada aula.  
 
+Veja os vídeos abaixo para entender um pouco melhor a mudança para material impresso e também algumas dicas de como aproveitar melhor esse tipo de material. Temos tanto para uso em papel como digital via anotações no PDF. 
+
+<a class="button" href="https://youtu.be/8eoDvbbxYhE">Uso do material em Papel</a> <!-- <a class="button" href="#">Uso do material em PDF</a> -->
+
+
 Além disso, também teremos exercícios de implementação gerais de cada assunto. Eles são listados no início de cada assunto.
 
 1. **implementação** dos algoritmos no PrairieLearn. Objetivo é traduzir os algoritmos vistos em sala para *C*.
 2. **exercícios extras** em sites como LeetCode, hackerrank e etc. Úteis para praticar para prova e ter mais exemplos dos algoritmos e estruturas de dados sendo usados. 
+
 
 # Aulas
 
