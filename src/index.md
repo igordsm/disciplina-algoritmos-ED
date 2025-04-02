@@ -37,7 +37,7 @@ $$
 NF = 0.2 \times PL + P1 \times 0.3 + P2 \times 0.5
 $$
 
-Com a condição de que $P1 \times 0.3 + P2 \times 0.5 \geq 4.5$. 
+Com a condição de que $(3 \times P1 + 5 \times P2)/8 \geq 4.5$. 
 
 # Como usar o material
 

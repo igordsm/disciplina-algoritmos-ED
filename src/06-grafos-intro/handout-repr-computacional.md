@@ -8,7 +8,6 @@ author: Igor Montagner
 
 Na primeira aula vimos as seguintes representações para grafos:
 
-
 **Representação formal**:
 
 Para grafos sem pesos:
@@ -18,7 +17,7 @@ Para grafos sem pesos:
 
 Para grafos com pesos:
 
-- $V = \{1 \dots N\} $
+- $V = \{1 \dots N\}$
 - $E = \{ (x, y) | x, y \in V; x \neq y\}$ 
 - $w(i, j) : E \rightarrow \mathcal{R}$ - função que recebe uma aresta e devolve seu peso. 
 
@@ -43,9 +42,22 @@ Se o grafo tiver pesos, então usamos a seguinte definição para a matriz $A$:
 $$
 A_{i,j} = \begin{cases}
 w(i, j) \text{ se } (i,j) \in E \\
--\infty \text{ caso contrário }
+\infty \text{ caso contrário }
 \end{cases}
 $$
+
+::: warn :::
+E esse $\infty$?
+
+Em C podemos usar a seguinte constante para atribuir $\infty$ a um `double`
+
+```c
+#include <math.h>
+
+double infinity = INFINITY;  
+```
+
+:::
 
 [break]
 
@@ -95,3 +107,4 @@ Pronto! Agora já conseguimos ir e usar nossa matriz! Note que:
 2. precisamos liberar essa memória depois de acabar
 
 Siga agora para o PrairieLearn para as atividades de Representação Computacional de grafos. 
+

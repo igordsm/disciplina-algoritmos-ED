@@ -8,8 +8,8 @@ author: Igor Montagner
 
 Um grafo é um $\mathcal{G} = (V, E)$ contendo dois conjuntos:
 
-- um conjunto $V = {0 \dots N-1}$ de vértices numerados de $0$ até $N=|V|$
-- um conjunto de arestas (**e**dges) $E = { (x, y) | x, y \in V; x \neq y}$ contendo pares de vértices. Toda aresta é **direcionada**. 
+- um conjunto $V = \{0 \dots N-1\}$ de vértices numerados de $0$ até $N=|V|$
+- um conjunto de arestas (**e**dges) $E = \{ (x, y) | x, y \in V; x \neq y\}$ contendo pares de vértices. Toda aresta é **direcionada**. 
 
 Se nosso grafo tiver pesos temos adicionalmente uma função $w : E \rightarrow \mathcal{R}$ que mapeia cada aresta em $E$ a um número real. 
 
@@ -103,7 +103,7 @@ Para grafos com pesos usamos a seguinte definição, em que armazenamos o peso d
 $$
 A_{i,j} = \begin{cases}
 w((i,j)) \text{ se } {i,j} \in E \\
--\infty \text{ caso contrário }
+\infty \text{ caso contrário }
 \end{cases}
 $$
 
@@ -126,8 +126,13 @@ Agora vamos praticar interpretar problemas "reais" usando grafos. Em cada proble
 - posts de cada usuário
 - toda vez que um usuário curte um post
 
-Vamos usar grafos para resolver este problema.
+Nós vamos querer responder às seguintes perguntas:
 
+1. Como saber quais usuários postaram algo que foi curtido?
+2. Como encontrar o usuário com maior número de posts curtidos?
+3. Como encontrar o usuário que mais curtiu posts?
+
+Vamos usar grafos para resolver este problema. Levando em conta essas perguntas, responda as questões abaixo.
 
 **Exercício**: Em nosso grafo, o que seriam os vértices?
 
@@ -141,40 +146,31 @@ Vamos usar grafos para resolver este problema.
 
 [line-spacer]
 
-## Representação computacional
-
 **Exercício**: Considere o log abaixo com as postagens e curtidas de 5 usuários. Ao lado, desenhe o grafo correspondente e escreva sua matriz de adjacências
 
 ```
 Usuário 1 fez post #1
 Usuário 3 gostou do post #1
-
 Usuário 5 fez post #2
 Usuário 2 gostou do post #1
-
 Usuário 3 fez post #3
-Usuário 3 gostou do post #1
+Usuário 3 gostou do post #2
 Usuário 2 gostou do post #3
 Usuário 2 gostou do post #2
-
 Usuário 2 fez post #4
 Usuário 4 gostou do post #4
 Usuário 3 gostou do post #4
-
 Usuário 5 fez post #5
 Usuário 5 fez post #6
-Usuário 2 fez post #6
-
+Usuário 2 fez post #7
 Usuário 4 gostou do post #3
 Usuário 1 gostou do post #5
 Usuário 1 gostou do post #6
 ```
 
-
 [break]
 
-
-Conseguimos tirar diversas informações interessantes diretamente da matriz de adjacências. Responda às questões abaixo:
+Vamos agora retomar as perguntas originais. Responda às questões abaixo usando a matriz de adjacências como base. 
 
 **Exercício**: Como saber quais usuários postaram algo que foi curtido?
 
