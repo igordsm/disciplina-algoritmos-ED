@@ -1,43 +1,55 @@
 ---
 title: Algoritmos e Estruturas de dados
-subtitle: 2025.1
+subtitle: 2025.2
 ...
 
-Bem vindo ao material de Algoritmos e Estruturas de Dados!
+# Avisos
 
-## Avisos
+**11/08**:
 
-**01/02**: Nesta disciplina, é proibida a utilização de ferramentas e plugins de IA generativa (IAg) em todas as atividades, pois a avaliação dos objetivos de aprendizagem é baseada no raciocínio lógico do próprio aluno.
+1. Nesta disciplina, é proibida a utilização de ferramentas e plugins de IA generativa (IAg) em todas as atividades, pois a avaliação dos objetivos de aprendizagem é baseada no raciocínio lógico do próprio aluno.
+2. Na semana do dia *02/11* estarei viajando. Reposições de aula e atividades extras com os ninjas serão comunicadas mais perto da data. 
 
-**18/02**: Na semana do dia *24/02* estarei viajando. Durante as aulas o Ian e a Ana Helena estarão na sala de reunião 03 no 3o andar do P2 (atrás do HelpDesk) para tirar dúvidas da disciplina. **Aproveitem esses horários, pois quando eu voltar já começamos com inserção!**
+**Links importantes**:
+
+- [Avisos (blackboard)](https://insper.blackboard.com/ultra/courses/_49978_1/announcements)
+- [Exercícios (prairie learn)](https://us.prairielearn.com/pl/course_instance/170365)
+- [Plano de aulas](./plano-de-aulas.xlsx)
+- [Calendário acadêmico](https://portaldoprofessor.insper.edu.br/wp-content/uploads/2024/12/CALENDARIO-GRADUACAO-_-PROVAS-GERAIS-_-USO-INTERNO.pdf)
 
 # Equipe
 
-- **Professor** Igor Montagner
-- **Alunos**:
-  - Ana Helena Caiafa
-  - Ian Cordibello Desponds
-- **Links importantes**:
-  - [Avisos (blackboard)](https://insper.blackboard.com/ultra/courses/_49978_1/announcements)
-  - [Exercícios (prairie learn)](https://us.prairielearn.com/pl/course_instance/170365)
-  - [Plano de aulas](./plano-de-aulas.xlsx)
-  - [Calendário acadêmico](https://portaldoprofessor.insper.edu.br/wp-content/uploads/2024/12/CALENDARIO-GRADUACAO-_-PROVAS-GERAIS-_-USO-INTERNO.pdf)
+::: equipe :::
+- ![](css/igor.png) Igor Montagner
+- Ana Helena Caiafa (2025/01)
+- Ian Cordibello Desponds (2025/01)
+- ![](css/livia.jpg) Lívia Tanaka (2024/02)
+- ![](css/vaz.jpg) Eduardo Vaz (2024/02)
+:::
+
+<!-- TODO: foto + nome de todos os ninjas.  -->
 
 # Avaliações
 
 Teremos os seguinte itens de avaliação
 
 - $PL$ - média de todos os exercícios no PrairieLearn
+- $QG$ - média dos quizzes (componente de grupo)
+- $QI$ - média dos quizzes (componente de individual)
 - $P1$ - prova de árvores 
 - $P2$ - prova de grafos
 
 A nota final $NF$ é calculada da seguinte maneira. 
 
 $$
-NF = 0.2 \times PL + P1 \times 0.3 + P2 \times 0.5
+NF = 0.2 \times PL + P1 \times 0.2 + P2 \times 0.4 + QG \times 0.05 + QI \times 0.15
 $$
 
-Com a condição de que $(3 \times P1 + 5 \times P2)/8 \geq 4.5$. 
+Com a condição de que $(2 \times P1 + 4 \times P2)/6 \geq 4.5$. 
+
+## Quizzes
+
+Teremos dois quizzes (um de árvores e um de grafos) na disciplina. Cada um será composto por uma parte de 40 minutos em duplas e uma parte de 1 hora individual. As duplas serão sorteadas e vocês serão avisados com antecedência. 
 
 # Como usar o material
 
@@ -50,7 +62,6 @@ Nossas aulas estão divididas em 3 materiais principais:
 Veja os vídeos abaixo para entender um pouco melhor a mudança para material impresso e também algumas dicas de como aproveitar melhor esse tipo de material. Temos tanto para uso em papel como digital via anotações no PDF. 
 
 <a class="button" href="https://youtu.be/8eoDvbbxYhE">Uso do material em Papel</a> <!-- <a class="button" href="#">Uso do material em PDF</a> -->
-
 
 Além disso, também teremos exercícios de implementação gerais de cada assunto. Eles são listados no início de cada assunto.
 
@@ -127,3 +138,9 @@ Os seguintes exercícios do leetcode são interessantes e relacionados ao assunt
 - [findTheCity](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/)
 - [Network Delay](https://leetcode.com/problems/network-delay-time/description/)
 
+
+# Materiais antigos
+
+Aqui está o material completo usado em cada ano nesta disciplina.
+
+- [2025/01](old/2025-1.zip)
