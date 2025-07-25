@@ -21,8 +21,8 @@ subtitle: 2025.2
 
 ::: equipe :::
 - ![](css/igor.png) Igor Montagner
-- Ana Helena Caiafa (2025/01)
-- Ian Cordibello Desponds (2025/01)
+- ![Ana](css/ana-helena.jpeg) Ana Helena Caiafa (2025/01)
+- ![](css/ian.jpeg) Ian Cordibello Desponds (2025/01)
 - ![](css/livia.jpg) Lívia Tanaka (2024/02)
 - ![](css/vaz.jpg) Eduardo Vaz (2024/02)
 :::
