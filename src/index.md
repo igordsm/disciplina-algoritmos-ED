@@ -12,10 +12,9 @@ subtitle: 2025.2
 
 **Links importantes**:
 
-- [Avisos (blackboard)](https://insper.blackboard.com/ultra/courses/_49978_1/announcements)
-- [Exercícios (prairie learn)](https://us.prairielearn.com/pl/course_instance/170365)
+- [Avisos (blackboard)](https://insper.blackboard.com/ultra/courses/_49672_1/announcements)
+- [Exercícios (prairie learn)](https://us.prairielearn.com/pl/course_instance/188416)
 - [Plano de aulas](./plano-de-aulas.xlsx)
-- [Calendário acadêmico](https://portaldoprofessor.insper.edu.br/wp-content/uploads/2024/12/CALENDARIO-GRADUACAO-_-PROVAS-GERAIS-_-USO-INTERNO.pdf)
 
 # Equipe
 
@@ -27,7 +26,6 @@ subtitle: 2025.2
 - ![](css/vaz.jpg) Eduardo Vaz (2024/02)
 :::
 
-<!-- TODO: foto + nome de todos os ninjas.  -->
 
 # Avaliações
 
