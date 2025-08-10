@@ -13,7 +13,7 @@ subtitle: 2025.2
 **Links importantes**:
 
 - [Avisos (blackboard)](https://insper.blackboard.com/ultra/courses/_49672_1/announcements)
-- [Exercícios (prairie learn)](https://us.prairielearn.com/pl/course_instance/188416)
+- [Exercícios (prairie learn)](https://us.prairielearn.com/pl/course_instance/188746)
 - [Plano de aulas](./plano-de-aulas.xlsx)
 
 # Equipe
@@ -55,7 +55,7 @@ Nossas aulas estão divididas em 3 materiais principais:
 
 1. **slides** usados nas partes expositivas das aulas. 
 2. **handouts** contendo atividades feitas em aula e explicações adicionais. Estão em formato PDF. É possível usar tanto impresso quanto anotando o PDF digitalmente.
-3. **exercícios conceituais** no PrairieLearn específicos para cada aula.  
+3. **exercícios conceituais** no PrairieLearn específicos para cada aula.
 
 Veja os vídeos abaixo para entender um pouco melhor a mudança para material impresso e também algumas dicas de como aproveitar melhor esse tipo de material. Temos tanto para uso em papel como digital via anotações no PDF. 
 
@@ -68,6 +68,8 @@ Além disso, também teremos exercícios de implementação gerais de cada assun
 
 
 # Aulas
+
+<center><object data="slides-inicio.pdf" width="400" height="300"></object></center>
 
 Atividades de aula estão organizadas em grandes tópicos que serão abordados em mais de uma aula. As atividades esperadas de cada dia estão listadas dentro de cada tópico.
 
