@@ -79,6 +79,8 @@ Os materiais iniciais estão no site dos [Labs de C](https://insper.github.io/La
 
 **Alocação de memória**: [handout](01-c/handout.pdf) / [slides](01-c/slides.pdf)
 
+<!--
+
 ## Árvores Binárias de Busca
 
 | Aula           | Materiais                                                                           |
@@ -144,3 +146,4 @@ Os seguintes exercícios do leetcode são interessantes e relacionados ao assunt
 Aqui está o material completo usado em cada ano nesta disciplina.
 
 - [2025/01](old/2025-1.zip)
+-->
