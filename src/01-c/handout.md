@@ -77,7 +77,7 @@ O terminal do VSCode é muito bom e podemos usá-lo para rodar todos os comandos
 
 \vspace{2em}
 
-**Exercício**: Agora tente ir mudando os valores de `N`. O comportamento de seu programa muda conforme N muda? Começe com `N=10` e vá incrementando de um em um. Você consegue explicar por que? Discuta com seu grupo e valide sua resposta com o professor.
+**Exercício**: Agora tente ir mudando os valores de `N`. O comportamento de seu programa muda conforme N muda? Começe com `N=10` e vá incrementando de um em um. Coloque abaixo suas observações.
 
 \vspace{2em}
 
@@ -86,7 +86,6 @@ O terminal do VSCode é muito bom e podemos usá-lo para rodar todos os comandos
 Aviso
 
 Em C é comum programas com problemas funcionarem de maneira imprevisível. Essencialmente, coisas erradas acontecem, mas elas podem não ser graves o suficiente para que o programa seja finalizado pelo sistema. Pequenas mudanças no código podem fazer um programa aparentemente OK quebrar. 
-
 :::
 
 

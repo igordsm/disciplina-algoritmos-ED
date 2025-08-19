@@ -77,7 +77,9 @@ Atividades de aula estão organizadas em grandes tópicos que serão abordados e
 
 Os materiais iniciais estão no site dos [Labs de C](https://insper.github.io/Labs-de-C). 
 
-**Alocação de memória**: [handout](01-c/handout.pdf) / [slides](01-c/slides.pdf)
+**Alocação de memória**: [handout](01-c/handout.pdf) / [slides](01-c/slides.pdf) / [PrairieLearn][pl-malloc]
+
+[pl-malloc]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569803
 
 <!--
 

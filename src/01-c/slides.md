@@ -123,4 +123,4 @@ free(dados);
 # Atividade prática
 
 1. **Exercícios básicos** (em aula): usos simples de malloc e free
-2. **APS**: revisão de strings + usos mais realistas de malloc
+2. **Exercício extra**: revisão de strings + usos mais realistas de malloc
