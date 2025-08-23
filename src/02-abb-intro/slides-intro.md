@@ -110,11 +110,11 @@ Todo nó deve obedecer a propriedade básica!
 
 ----
 
-# Hoje + segunda
+# Hoje + próxima aula
 
 - Leitura do Handout
 - Exercícios básicos no handout
 - Busca e validação no PrairieLearn
 
-
+**Sugestão**: fazer todos os exercícios conceituais hoje e deixar código para a próxima aula
 
