@@ -85,14 +85,17 @@ Os materiais iniciais estão no site dos [Labs de C](https://insper.github.io/La
 
 ## Árvores Binárias de Busca
 
-| Aula       | Slides                                  | Handout                                  | Exercícios                       |
-|------------|-----------------------------------------|------------------------------------------|----------------------------------|
-| Introdução | [Baixar](02-abb-intro/slides-intro.pdf) | [Baixar](02-abb-intro/handout-intro.pdf) | [Acessar][exercicios-intro-abb]  |
-| Inserção   |                                         | [Handout](03-abb-insere/handout.pdf)     | [Acessar][exercicios-insere-abb] |
-|            |                                         |                                          |                                  |
+| Aula          | Slides                                  | Handout                                  | Exercícios                          |
+|---------------|-----------------------------------------|------------------------------------------|-------------------------------------|
+| Introdução    | [Baixar](02-abb-intro/slides-intro.pdf) | [Baixar](02-abb-intro/handout-intro.pdf) | [Acessar][exercicios-intro-abb]     |
+| Inserção      |                                         | [Handout](03-abb-insere/handout.pdf)     | [Acessar][exercicios-insere-abb]    |
+| Balanceamento | [Slides](04-abb-balance/slides.pdf)     | [Handout](04-abb-balance/handout.pdf)    | [Acessar][exercicios-balanceia-abb] |
+|               |                                         |                                          |                                     |
 
 [exercicios-intro-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569795
 [exercicios-insere-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569794
+[exercicios-balanceia-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569793
+
 
 <!--
 | Balanceamento  | [Slides](04-abb-balance/slides.pdf) / [Handout](04-abb-balance/handout.pdf)         |
