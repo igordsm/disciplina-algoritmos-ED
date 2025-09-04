@@ -85,23 +85,19 @@ Os materiais iniciais estão no site dos [Labs de C](https://insper.github.io/La
 
 ## Árvores Binárias de Busca
 
-| Aula          | Slides                                  | Handout                                  | Exercícios                          |
-|---------------|-----------------------------------------|------------------------------------------|-------------------------------------|
-| Introdução    | [Baixar](02-abb-intro/slides-intro.pdf) | [Baixar](02-abb-intro/handout-intro.pdf) | [Acessar][exercicios-intro-abb]     |
-| Inserção      |                                         | [Handout](03-abb-insere/handout.pdf)     | [Acessar][exercicios-insere-abb]    |
-| Balanceamento | [Slides](04-abb-balance/slides.pdf)     | [Handout](04-abb-balance/handout.pdf)    | [Acessar][exercicios-balanceia-abb] |
-|               |                                         |                                          |                                     |
+| Aula          | Slides                                        | Handout                                  | Exercícios                          |
+|---------------|-----------------------------------------------|------------------------------------------|-------------------------------------|
+| Introdução    | [Baixar](02-abb-intro/slides-intro.pdf)       | [Baixar](02-abb-intro/handout-intro.pdf) | [Acessar][exercicios-intro-abb]     |
+| Inserção      |                                               | [Handout](03-abb-insere/handout.pdf)     | [Acessar][exercicios-insere-abb]    |
+| Balanceamento | [Slides](04-abb-balance/slides.pdf)           | [Handout](04-abb-balance/handout.pdf)    | [Acessar][exercicios-balanceia-abb] |
+| Remoção       | [Video Rotação](https://youtu.be/YzSuUj54Mo0) | [Handout](05-abb-remove/handout.pdf)     | [Acessar][exercicios-remove-abb]    |
+|               |                                               |                                          |                                     |
 
 [exercicios-intro-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569795
 [exercicios-insere-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569794
 [exercicios-balanceia-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569793
+[exercicios-remove-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569796
 
-
-<!--
-| Balanceamento  | [Slides](04-abb-balance/slides.pdf) / [Handout](04-abb-balance/handout.pdf)         |
-| Remoção        | [Slides](05-abb-remove/slides.pdf) / [Handout](05-abb-remove/handout.pdf) / [Vídeo Remoção](https://youtu.be/YzSuUj54Mo0)           |
-
--->
 
 ### Exercícios extras
 
@@ -109,10 +105,12 @@ Os seguintes exercícios do leetcode são interessantes e relacionados ao assunt
 
 1. (**BÁSICO**)[Soma de caminho até folha](https://leetcode.com/problems/path-sum/)
 2. (**BÁSICO**)[Soma K](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)
-<!--3. (**BÁSICO**)[Altura mínima](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
+3. (**BÁSICO**)[Altura mínima](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
 4. (**BÁSICO**)[Visitando em pré-ordem](https://www.hackerrank.com/contests/2014-icpc-north-central-regional-north-america-practice/challenges/preorder-traversals)
 5. (**MÉDIO**)[Convertendo array ordenado em árvore](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
 
+
+<!--
 ## Grafos
 
 
