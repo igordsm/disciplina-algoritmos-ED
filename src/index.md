@@ -5,6 +5,10 @@ subtitle: 2025.2
 
 # Avisos
 
+**10/08**:
+
+Teremos um quiz em duplas no dia 12/08. As duplas foram sorteadas e estão disponíveis [aqui](grupos-quiz1.csv).
+
 **11/08**:
 
 1. Nesta disciplina, é proibida a utilização de ferramentas e plugins de IA generativa (IAg) em todas as atividades, pois a avaliação dos objetivos de aprendizagem é baseada no raciocínio lógico do próprio aluno.
@@ -20,7 +24,7 @@ subtitle: 2025.2
 
 ::: equipe :::
 - ![](css/igor.png) Igor Montagner
-- ![Ana](css/ana-helena.jpeg) Ana Helena Caiafa (2025/01)
+- ![Ana](css/ana-helena.jpeg) Ana Helena Caiafa (2025)
 - ![](css/ian.jpeg) Ian Cordibello Desponds (2025/01)
 - ![](css/livia.jpg) Lívia Tanaka (2024/02)
 - ![](css/vaz.jpg) Eduardo Vaz (2024/02)
@@ -33,14 +37,13 @@ Teremos os seguinte itens de avaliação
 
 - $PL$ - média de todos os exercícios no PrairieLearn
 - $QG$ - média dos quizzes (componente de grupo)
-- $QI$ - média dos quizzes (componente de individual)
 - $P1$ - prova de árvores 
 - $P2$ - prova de grafos
 
 A nota final $NF$ é calculada da seguinte maneira. 
 
 $$
-NF = 0.2 \times PL + P1 \times 0.2 + P2 \times 0.4 + QG \times 0.05 + QI \times 0.15
+NF = 0.2 \times PL + P1 \times 0.2 + P2 \times 0.4 + QG \times 0.2 
 $$
 
 Com a condição de que $(2 \times P1 + 4 \times P2)/6 \geq 4.5$. 
