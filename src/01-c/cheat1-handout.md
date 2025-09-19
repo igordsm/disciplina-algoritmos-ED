@@ -27,7 +27,7 @@ No C, não existe inferência automática de tipos. Toda variável e todo valor 
 1. Divisão de **int** resultará sempre em um **int** (como a operação **//** em *Python*).
 2. Operações que misturam **int** e **float** fazem conversão para **float**.
 3. **Strings** em C são arrays de caracteres terminados obrigatoriamente com o caractere nulo **'\0'**. Sem esse terminador, funções de string não sabem onde a string acaba.
-4. O tipo **char*** é um ponteiro para o primeiro caractere de uma string, e pode apontar para memória estática (literal de string) ou dinâmica (alocada com **malloc** -> falaremos mais em breve).
+4. O tipo **char*** é um ponteiro para o primeiro caractere de uma string, e pode apontar para memória estática (literal de string) ou dinâmica (alocada com **malloc**).
 :::
 
 ## Algoritmos
@@ -57,30 +57,6 @@ int soma(int a, int b) {
 ```
 :::
 
-## Ponteiros
-
-Em C, um **ponteiro** é uma variável que armazena o endereço de memória de outra variável. Usamos o operador **&** para obter o endereço e o operador `*` para acessar ou modificar o valor armazenado nesse **endereço**. Ponteiros permitem manipular diretamente valores na memória e são fundamentais em C para trabalhar com struct, vetores e funções.
-
-::: side-by-side :::
-\begin{algorithm}[H]
-\DontPrintSemicolon
-\SetAlgoLined
-\KwResult{Altera o valor referenciado por $p$}
-\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
-\Input{$\textbf{int* } p$}
-\Output{$\textbf{void}$}
-\BlankLine
-$*p \gets 20$\;
-\caption{Exemplo2}
-\end{algorithm}
-
-```c
-// Função que recebe um ponteiro e altera o valor original
-void alteraValor(int *p) {
-    *p = 20;  // modifica o valor armazenado no endereço
-}
-```
-:::
 ## Condicionais e Loops
 
 Em C, blocos de código dentro de condicionais e loops são delimitados por chaves `{ }`.  
@@ -155,7 +131,33 @@ for (int i = 5; i < 10; i++) {
 ```
 :::
 
+## Ponteiros
+
+Em C, um **ponteiro** é uma variável que armazena o endereço de memória de outra variável. Usamos o operador **&** para obter o endereço e o operador `*` para acessar ou modificar o valor armazenado nesse **endereço**. Ponteiros permitem manipular diretamente valores na memória e são fundamentais em C para trabalhar com struct, vetores e funções.
+
+::: side-by-side :::
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+\KwResult{Altera o valor referenciado por $p$}
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\Input{$\textbf{int* } p$}
+\Output{$\textbf{void}$}
+\BlankLine
+$*p \gets 20$\;
+\caption{Exemplo2}
+\end{algorithm}
+
+```c
+// Função que recebe um ponteiro e altera o valor original
+void alteraValor(int *p) {
+    *p = 20;  // modifica o valor armazenado no endereço
+}
+```
+:::
+
 ## Alocação estática e dinâmica
+
 
 - **Estática**: o tamanho do array é fixado no código em tempo de compilação. A memória é reservada automaticamente e liberada quando a função termina.  
 Exemplo: `int v[10];`
@@ -188,11 +190,13 @@ char *s = malloc(n * sizeof(char));
 
 :::
 
-## ⚠ Pontos de atenção
+::: warn :::
+Atenção!
 
 - Sempre use `free` para liberar a memória alocada. Se esquecer, ocorre **vazamento de memória**.  
 - A memória alocada por `malloc` vem com **lixo**, então **prepare antes de usar** (por exemplo, inicializando com zeros ou valores desejados).  
 
+:::
 
 ## Arrays
 
