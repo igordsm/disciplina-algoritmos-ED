@@ -113,18 +113,21 @@ Os seguintes exercícios do leetcode são interessantes e relacionados ao assunt
 5. (**MÉDIO**)[Convertendo array ordenado em árvore](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
 
 
-<!--
 ## Grafos
 
 
-| Aula                                | Materiais                                                                                       |
-| --                                  | ---                                                                                             |
-| Introdução                          | [Slides](06-grafos-intro/slides.pdf) / [Handout](06-grafos-intro/handout.pdf)                   |
-| Representação Computacional         | [Handout](06-grafos-intro/handout-repr-computacional.pdf)                                       |
+| Aula                                | Materiais                                                                         | Exercícios                                         |
+| --                                  | ---                                                                               | ---                                                |
+| Introdução                          | [Slides](06-grafos-intro/slides.pdf) / [Handout](06-grafos-intro/handout.pdf)     | [Acessar][exercicios-grafos-basicos]               |
+| Representação Computacional         | [Handout](06-grafos-intro/handout-repr-computacional.pdf)                         | [Acessar][exercicios-grafos-repr]                  |
+<!--
 | Componentes conexos                 | [Slides](07-dfs/slides.pdf) / [Handout](07-dfs/handout.pdf)                                     |
 | Caminhos mínimos                    | [Slides](08-bfs/slides.pdf) / [Handout](08-bfs/handout.pdf)                                     |
 | Caminhos mínimos com pesos          | [Slides](09-dijkstra/slides.pdf) / [Handout](09-dijkstra/handout.pdf)                           |
+-->
 
+[exercicios-grafos-basicos]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569799
+[exercicios-grafos-repr]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2592464
 
 ### Exercícios extras
 
@@ -135,7 +138,7 @@ Os seguintes exercícios do leetcode são interessantes e relacionados ao assunt
 - [Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)
 - [Star Graphs](https://leetcode.com/problems/find-center-of-star-graph/)
 - [Town Judge](https://leetcode.com/problems/find-the-town-judge/)
-
+<!--
 **Busca em Profundidade**:
 
 - [Course Schedule](https://leetcode.com/problems/course-schedule/description/)
@@ -152,11 +155,10 @@ Os seguintes exercícios do leetcode são interessantes e relacionados ao assunt
 
 - [findTheCity](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/)
 - [Network Delay](https://leetcode.com/problems/network-delay-time/description/)
-
+-->
 
 # Materiais antigos
 
 Aqui está o material completo usado em cada ano nesta disciplina.
 
 - [2025/01](old/2025-1.zip)
--->
