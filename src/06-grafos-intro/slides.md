@@ -12,13 +12,13 @@ footer: 'Igor Montagner (igorsm1@insper.edu.br)'
 
 --------
 
-![](mapa.png)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Severe_floods_in_the_southern_of_Brazil_%28Copernicus%29.jpg/1280px-Severe_floods_in_the_southern_of_Brazil_%28Copernicus%29.jpg)
 
 ---------
 
-# Enchentes em Heliópolis
+# Chuvas no Rio Grande do Sul em 2024
 
-- Alguma área está isolada do resto da comunidade?
+- Alguma área isolada?
 - Como sair de sua casa até um destino?
 - Qual o mínimo de intervenções necessárias para que todos pontos isolados sejam restaurados?
 
@@ -41,16 +41,16 @@ digraph G {
 
 # Grafo
 
-- $V = {1 \dots N}$ - conjunto de vértices
-- $E = { (x, y) | x, y \in V; x \neq y}$ 
+- $V = \{0 \dots N-1\}$ - conjunto de vértices
+- $E = \{ (v, w) | v, w \in V; v \neq w\}$ 
     - conjunto de arestas (*edges*)
-    - sai de $x$ e chega em $y$
+    - sai de $v$ e chega em $w$
 
 -----
 
 # E o mapa?
 
-##  Alguma área está isolada do resto da comunidade?
+##  Alguma área está isolada?
 
 1. o que cada vértice do grafo representa?
 2. qual relação  entre vértices uma aresta representa?
@@ -62,14 +62,13 @@ digraph G {
 # Tipos de grafos
 
 1. simetria:
-    - não direcionado: associações são sempre bi-direcionais (${i,j} \in E \Leftrightarrow {j,i} \in E$)
+    - não direcionado: (${i,j} \in E \Leftrightarrow {j,i} \in E$)
     - direcionado: associações podem ou não ser bi-direcionais
 2. pesos:
     - arestas são todas equivalente
     - cada aresta tem um número real associado a ela
 
-
-Em alguns problema específicos podem ser permitidos loops (${i, i} \in E$) ou mais de uma aresta por par de vértices. Isso **não deve ocorrer nos problemas desta disciplina**.
+Em alguns problema específicos podem ser permitidos loops ($(i, i) \in E$) ou mais de uma aresta por par de vértices. Isso **não deve ocorrer nos problemas desta disciplina**.
 
 ----
 
@@ -85,8 +84,8 @@ Em alguns problema específicos podem ser permitidos loops (${i, i} \in E$) ou m
 # Representação computacional
 
 **Representação formal**:
-- $V = {1 \dots N}$
-- $E = { (x, y) | x, y \in V; x \neq y}$ 
+- $V = \{0 \dots N-1\}$ - conjunto de vértices
+- $E = \{ (v, w) | v, w \in V; v \neq w\}$
 
 Como transformar em uma representação **computacional** eficiente?
 
@@ -106,10 +105,17 @@ $$
 
 ----
 
-# Representação computacional
+# Representação computacional (reflexão)
 
 - quantas arestas **chegam** no vértice $i$?
 - quantas arestas **saem** no vértice $i$?
 - como é a matriz se o grafo for **não direcionado**?
 - e se tiver pesos?
 
+--------
+
+<!-- _class: front -->
+
+# Atividade 1
+
+**Definições básicas e um problema simples de modelagem em grafos**

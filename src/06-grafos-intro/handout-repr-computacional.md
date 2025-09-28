@@ -13,13 +13,13 @@ Na primeira aula vimos as seguintes representações para grafos:
 Para grafos sem pesos:
 
 - $V = \{1 \dots N\}$
-- $E = \{ (x, y) | x, y \in V; x \neq y\}$ 
+- $E = \{ (v, w) | v, w \in V; v \neq w\}$ 
 
 Para grafos com pesos:
 
 - $V = \{1 \dots N\}$
-- $E = \{ (x, y) | x, y \in V; x \neq y\}$ 
-- $w(i, j) : E \rightarrow \mathcal{R}$ - função que recebe uma aresta e devolve seu peso. 
+- $E = \{ (v, w) | v, w \in V; v \neq w\}$ 
+- $w(v, w) : E \rightarrow \mathcal{R}$ - função que recebe uma aresta e devolve seu peso. 
 
 -----------------
 
@@ -83,7 +83,7 @@ Se cada linha da nossa matriz é um array, precisamos de dois níveis de alocaç
 
 Vamos pensar um pouco agora.
 
-**Exercício**: Complete abaixo com a chamada para `malloc` que criaria o nível um acima para uma matriz de $4$ vértices
+**Exercício**: Complete abaixo com a chamada para `malloc` que criaria o nível **1.** acima para uma matriz de $4$ vértices
 
 ```c
 double **mat =                           
@@ -105,6 +105,10 @@ Pronto! Agora já conseguimos ir e usar nossa matriz! Note que:
 
 1. não inicializamos nenhuma casa da matriz. 
 2. precisamos liberar essa memória depois de acabar
+
+
+**Exercício**: Com qual valores inicializaremos a matriz `mat` para grafos sem pesos? E para grafos com pesos?
+
 
 Siga agora para o PrairieLearn para as atividades de Representação Computacional de grafos. 
 

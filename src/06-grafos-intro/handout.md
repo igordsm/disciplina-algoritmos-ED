@@ -6,10 +6,10 @@ author: Igor Montagner
 ...
 
 
-Um grafo é um $\mathcal{G} = (V, E)$ contendo dois conjuntos:
+Um grafo é uma tupla $\mathcal{G} = (V, E)$ contendo dois conjuntos:
 
 - um conjunto $V = \{0 \dots N-1\}$ de vértices numerados de $0$ até $N=|V|$
-- um conjunto de arestas (**e**dges) $E = \{ (x, y) | x, y \in V; x \neq y\}$ contendo pares de vértices. Toda aresta é **direcionada**. 
+- um conjunto de arestas (**E**dges) $E = \{ (v, w) | v, w \in V; v \neq w\}$ contendo pares de vértices. Toda aresta é **direcionada**, ou seja tem um início $v$ e um destino $w$.
 
 Se nosso grafo tiver pesos temos adicionalmente uma função $w : E \rightarrow \mathcal{R}$ que mapeia cada aresta em $E$ a um número real. 
 
@@ -33,7 +33,9 @@ Nessas primeiras atividades iremos praticar as definições básicas de grafos e
 
 [line-spacer]
 
-**Exercício**: E para o grafo **não direcionado** abaixo?
+Um grafo é **não direcionado** se para toda aresta $(x,w) \in E$ também existe uma aresta no sentido contrário $(w, v) \in E$. Para os desenhos ficarem mais limpos, desenhamos grafos direcionados com arestas *sem setinhas*;
+
+**Exercício**: Qual o número de vértices e arestas do grafo **não direcionado** abaixo?
 
 ``` {.graphviz width=20%}
 graph G{ 
@@ -102,11 +104,18 @@ Para grafos com pesos usamos a seguinte definição, em que armazenamos o peso d
 
 $$
 A_{i,j} = \begin{cases}
-w((i,j)) \text{ se } {i,j} \in E \\
+w(i,j) \text{ se } {i,j} \in E \\
 \infty \text{ caso contrário }
 \end{cases}
 $$
 
+[line-spacer]
+
+::: done :::
+Exercícios no PrairieLearn
+
+Temos uma série de exercícios básicos das definições acima no PrairieLearn. Faça-os antes de prosseguir.
+:::
 
 [break]
 
