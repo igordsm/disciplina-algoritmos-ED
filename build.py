@@ -56,7 +56,7 @@ for f in all_files:
         sh(f'{PANDOC_PAGE} {PANDOC_VARS} --resource-path {dir} {f} -o {resname}')
     else:
         if show_file_list:
-            print(resname)
+            print(f)
         else:
             print('copy', f)
         sh(f'cp {f} {without_src}')
