@@ -121,7 +121,7 @@ Os seguintes exercícios do leetcode são interessantes e relacionados ao assunt
 | Introdução                          | [Slides](06-grafos-intro/slides.pdf) / [Handout](06-grafos-intro/handout.pdf)     | [Acessar][exercicios-grafos-basicos]                   |
 | Representação Computacional         | [Handout](06-grafos-intro/handout-repr-computacional.pdf)                         | [Acessar][exercicios-grafos-repr]                      |
 | Componentes conexos                 | [Slides](07-dfs/slides.pdf) / [Handout](07-dfs/handout.pdf)                       | [Acessar][exercicios-grafos-dfs]                       |
-| Caminhos mínimos                    | [Slides](08-bfs/slides.pdf) / [Handout](08-bfs/handout.pdf)                       |[Acessar][exercicios-grafos-bfs]                        |
+| Caminhos mínimos                    | [Slides](08-bfs/slides.pdf) / [Handout](08-bfs/handout.pdf) [Anotações](08-bfs/handout-anotado.pdf)                       |[Acessar][exercicios-grafos-bfs]                        |
 | Caminhos mínimos com pesos          | [Slides](09-dijkstra/slides.pdf) / [Handout](09-dijkstra/handout.pdf)             |[Acessar][exercicios-grafos-dijkstra]                   |
 
 [exercicios-grafos-basicos]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569799
