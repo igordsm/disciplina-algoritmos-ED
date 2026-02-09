@@ -1,23 +1,17 @@
 ---
 title: Algoritmos e Estruturas de dados
-subtitle: 2025.2
+subtitle: 2026.1
 ...
 
 # Avisos
 
-**10/08**:
+**09/02**: Nesta disciplina, é proibida a utilização de ferramentas e plugins de IA generativa (IAg) em todas as atividades, pois a avaliação dos objetivos de aprendizagem é baseada no raciocínio lógico do próprio aluno.
 
-Teremos um quiz em duplas no dia 12/08. As duplas foram sorteadas e estão disponíveis [aqui](grupos-quiz1.csv).
-
-**11/08**:
-
-1. Nesta disciplina, é proibida a utilização de ferramentas e plugins de IA generativa (IAg) em todas as atividades, pois a avaliação dos objetivos de aprendizagem é baseada no raciocínio lógico do próprio aluno.
-2. Na semana do dia *02/11* estarei viajando. Reposições de aula e atividades extras com os ninjas serão comunicadas mais perto da data. 
 
 **Links importantes**:
 
-- [Avisos (blackboard)](https://insper.blackboard.com/ultra/courses/_49672_1/announcements)
-- [Exercícios (prairie learn)](https://us.prairielearn.com/pl/course_instance/188746)
+- [Avisos (blackboard)](https://insper.blackboard.com/ultra/courses/_52846_1/announcements)
+- [Exercícios (prairie learn)](#)
 - [Plano de aulas](./plano-de-aulas.xlsx)
 
 # Equipe
@@ -48,9 +42,6 @@ $$
 
 Com a condição de que $(2 \times P1 + 4 \times P2)/6 \geq 4.5$. 
 
-## Quizzes
-
-Teremos dois quizzes (um de árvores e um de grafos) na disciplina. Cada um será composto por uma parte de 40 minutos em duplas e uma parte de 1 hora individual. As duplas serão sorteadas e vocês serão avisados com antecedência. 
 
 # Como usar o material
 
@@ -80,84 +71,82 @@ Atividades de aula estão organizadas em grandes tópicos que serão abordados e
 
 Os materiais iniciais estão no site dos [Labs de C](https://insper.github.io/Labs-de-C). 
 
-**Alocação de memória**: [handout](01-c/handout.pdf) / [slides](01-c/slides.pdf) / [PrairieLearn][pl-malloc]
-
-[pl-malloc]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569803
-
-
-
-## Árvores Binárias de Busca
-
-| Aula          | Slides                                        | Handout                                  | Exercícios                          |
-|---------------|-----------------------------------------------|------------------------------------------|-------------------------------------|
-| Introdução    | [Baixar](02-abb-intro/slides-intro.pdf)       | [Baixar](02-abb-intro/handout-intro.pdf) | [Acessar][exercicios-intro-abb]     |
-| Inserção      |                                               | [Handout](03-abb-insere/handout.pdf)     | [Acessar][exercicios-insere-abb]    |
-| Balanceamento | [Slides](04-abb-balance/slides.pdf)           | [Handout](04-abb-balance/handout.pdf)    | [Acessar][exercicios-balanceia-abb] |
-| Remoção       | [Video Rotação](https://youtu.be/YzSuUj54Mo0) | [Handout](05-abb-remove/handout.pdf)     | [Acessar][exercicios-remove-abb]    |
-|               |                                               |                                          |                                     |
-
-[exercicios-intro-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569795
-[exercicios-insere-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569794
-[exercicios-balanceia-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569793
-[exercicios-remove-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569796
+<!-- **Alocação de memória**: [handout](01-c/handout.pdf) / [slides](01-c/slides.pdf) / [PrairieLearn][pl-malloc] -->
+<!---->
+<!-- [pl-malloc]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569803 -->
 
 
-### Exercícios extras
-
-Os seguintes exercícios do leetcode são interessantes e relacionados ao assunto atual.
-
-1. (**BÁSICO**)[Soma de caminho até folha](https://leetcode.com/problems/path-sum/)
-2. (**BÁSICO**)[Soma K](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)
-3. (**BÁSICO**)[Altura mínima](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
-4. (**BÁSICO**)[Visitando em pré-ordem](https://www.hackerrank.com/contests/2014-icpc-north-central-regional-north-america-practice/challenges/preorder-traversals)
-5. (**MÉDIO**)[Convertendo array ordenado em árvore](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
-
-
-## Grafos
-
-
-| Aula                                | Materiais                                                                         | Exercícios                                             |
-| --                                  | ---                                                                               | ---                                                    |
-| Introdução                          | [Slides](06-grafos-intro/slides.pdf) / [Handout](06-grafos-intro/handout.pdf)     | [Acessar][exercicios-grafos-basicos]                   |
-| Representação Computacional         | [Handout](06-grafos-intro/handout-repr-computacional.pdf)                         | [Acessar][exercicios-grafos-repr]                      |
-| Componentes conexos                 | [Slides](07-dfs/slides.pdf) / [Handout](07-dfs/handout.pdf)                       | [Acessar][exercicios-grafos-dfs]                       |
-| Caminhos mínimos                    | [Slides](08-bfs/slides.pdf) / [Handout](08-bfs/handout.pdf) [Anotações](08-bfs/handout-anotado.pdf)                       |[Acessar][exercicios-grafos-bfs]                        |
-| Caminhos mínimos com pesos          | [Slides](09-dijkstra/slides.pdf) / [Handout](09-dijkstra/handout.pdf) / [Anotações](09-dijkstra/handout-anotado.pdf)             |[Acessar][exercicios-grafos-dijkstra]                   |
-
-[exercicios-grafos-basicos]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569799
-[exercicios-grafos-repr]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2592464
-[exercicios-grafos-dfs]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569801
-[exercicios-grafos-bfs]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569800
-[exercicios-grafos-dijkstra]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569802
-
-### Exercícios extras
-
-Os seguintes exercícios do leetcode são interessantes e relacionados ao assunto atual.
-
-**Básicos**:
-
-- [Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)
-- [Star Graphs](https://leetcode.com/problems/find-center-of-star-graph/)
-- [Town Judge](https://leetcode.com/problems/find-the-town-judge/)
-
-**Busca em Profundidade**:
-
-
-- [Course Schedule](https://leetcode.com/problems/course-schedule/description/)
-- [Number of Islands](https://leetcode.com/problems/number-of-islands/description/)
-- [Is graph bipartite](https://leetcode.com/problems/is-graph-bipartite/description/)
-
-**Busca em Largura**:
-
-- [Flood fill](https://leetcode.com/problems/flood-fill/description/)
-- [Island perimeter](https://leetcode.com/problems/island-perimeter/description/)
-- [01 Matrix](https://leetcode.com/problems/01-matrix/description/)
-
-**Dijkstra**:
-
-- [findTheCity](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/)
-- [Network Delay](https://leetcode.com/problems/network-delay-time/description/)
-
+<!---->
+<!-- ## Árvores Binárias de Busca -->
+<!---->
+<!-- | Aula          | Slides                                        | Handout                                  | Exercícios                          | -->
+<!-- |---------------|-----------------------------------------------|------------------------------------------|-------------------------------------| -->
+<!-- | Introdução    | [Baixar](02-abb-intro/slides-intro.pdf)       | [Baixar](02-abb-intro/handout-intro.pdf) | [Acessar][exercicios-intro-abb]     | -->
+<!-- | Inserção      |                                               | [Handout](03-abb-insere/handout.pdf)     | [Acessar][exercicios-insere-abb]    | -->
+<!-- | Balanceamento | [Slides](04-abb-balance/slides.pdf)           | [Handout](04-abb-balance/handout.pdf)    | [Acessar][exercicios-balanceia-abb] | -->
+<!-- | Remoção       | [Video Rotação](https://youtu.be/YzSuUj54Mo0) | [Handout](05-abb-remove/handout.pdf)     | [Acessar][exercicios-remove-abb]    | -->
+<!-- |               |                                               |                                          |                                     | -->
+<!---->
+<!-- [exercicios-intro-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569795 -->
+<!-- [exercicios-insere-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569794 -->
+<!-- [exercicios-balanceia-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569793 -->
+<!-- [exercicios-remove-abb]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569796 -->
+<!---->
+<!---->
+<!-- ### Exercícios extras -->
+<!---->
+<!-- Os seguintes exercícios do leetcode são interessantes e relacionados ao assunto atual. -->
+<!---->
+<!-- 1. (**BÁSICO**)[Soma de caminho até folha](https://leetcode.com/problems/path-sum/) -->
+<!-- 2. (**BÁSICO**)[Soma K](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) -->
+<!-- 3. (**BÁSICO**)[Altura mínima](https://leetcode.com/problems/minimum-depth-of-binary-tree/) -->
+<!-- 4. (**BÁSICO**)[Visitando em pré-ordem](https://www.hackerrank.com/contests/2014-icpc-north-central-regional-north-america-practice/challenges/preorder-traversals) -->
+<!-- 5. (**MÉDIO**)[Convertendo array ordenado em árvore](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) -->
+<!---->
+<!---->
+<!-- ## Grafos -->
+<!---->
+<!---->
+<!-- | Aula                                | Materiais                                                                         | Exercícios                                             | -->
+<!-- | --                                  | ---                                                                               | ---                                                    | -->
+<!-- | Introdução                          | [Slides](06-grafos-intro/slides.pdf) / [Handout](06-grafos-intro/handout.pdf)     | [Acessar][exercicios-grafos-basicos]                   | -->
+<!-- | Representação Computacional         | [Handout](06-grafos-intro/handout-repr-computacional.pdf)                         | [Acessar][exercicios-grafos-repr]                      | -->
+<!-- | Componentes conexos                 | [Slides](07-dfs/slides.pdf) / [Handout](07-dfs/handout.pdf)                       | [Acessar][exercicios-grafos-dfs]                       | -->
+<!-- | Caminhos mínimos                    | [Slides](08-bfs/slides.pdf) / [Handout](08-bfs/handout.pdf)                       |[Acessar][exercicios-grafos-bfs]                        | -->
+<!-- | Caminhos mínimos com pesos          | [Slides](09-dijkstra/slides.pdf) / [Handout](09-dijkstra/handout.pdf)             |[Acessar][exercicios-grafos-dijkstra]                   | -->
+<!---->
+<!-- [exercicios-grafos-basicos]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569799 -->
+<!-- [exercicios-grafos-repr]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2592464 -->
+<!-- [exercicios-grafos-dfs]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569801 -->
+<!-- [exercicios-grafos-bfs]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569800 -->
+<!-- [exercicios-grafos-dijkstra]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569802 -->
+<!---->
+<!-- ### Exercícios extras -->
+<!---->
+<!-- Os seguintes exercícios do leetcode são interessantes e relacionados ao assunto atual. -->
+<!---->
+<!-- **Básicos**: -->
+<!---->
+<!-- - [Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/) -->
+<!-- - [Star Graphs](https://leetcode.com/problems/find-center-of-star-graph/) -->
+<!-- - [Town Judge](https://leetcode.com/problems/find-the-town-judge/) -->
+<!-- **Busca em Profundidade**: -->
+<!---->
+<!-- - [Course Schedule](https://leetcode.com/problems/course-schedule/description/) -->
+<!-- - [Number of Islands](https://leetcode.com/problems/number-of-islands/description/) -->
+<!-- - [Is graph bipartite](https://leetcode.com/problems/is-graph-bipartite/description/) -->
+<!---->
+<!-- **Busca em Largura**: -->
+<!---->
+<!-- - [Flood fill](https://leetcode.com/problems/flood-fill/description/) -->
+<!-- - [Island perimeter](https://leetcode.com/problems/island-perimeter/description/) -->
+<!-- - [01 Matrix](https://leetcode.com/problems/01-matrix/description/) -->
+<!---->
+<!-- **Dijkstra**: -->
+<!---->
+<!-- - [findTheCity](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/) -->
+<!-- - [Network Delay](https://leetcode.com/problems/network-delay-time/description/) -->
+<!---->
 # Materiais antigos
 
 Aqui está o material completo usado em cada ano nesta disciplina.
