@@ -11,7 +11,7 @@ subtitle: 2026.1
 **Links importantes**:
 
 - [Avisos (blackboard)](https://insper.blackboard.com/ultra/courses/_52846_1/announcements)
-- [Exercícios (prairie learn)](#)
+- [Exercícios (prairie learn)](https://us.prairielearn.com/pl/course_instance/211219)
 - [Plano de aulas](./plano-de-aulas.xlsx)
 
 # Equipe
@@ -71,9 +71,9 @@ Atividades de aula estão organizadas em grandes tópicos que serão abordados e
 
 Os materiais iniciais estão no site dos [Labs de C](https://insper.github.io/Labs-de-C). 
 
-<!-- **Alocação de memória**: [handout](01-c/handout.pdf) / [slides](01-c/slides.pdf) / [PrairieLearn][pl-malloc] -->
-<!---->
-<!-- [pl-malloc]: https://us.prairielearn.com/pl/course_instance/188746/assessment/2569803 -->
+**Alocação de memória**: [handout](01-c/handout.pdf) / [slides](01-c/slides.pdf) / [PrairieLearn][pl-malloc]
+
+[pl-malloc]: https://us.prairielearn.com/pl/course_instance/211219/assessment/2651609
 
 
 <!---->
