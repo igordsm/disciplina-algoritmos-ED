@@ -92,17 +92,21 @@ Os materiais iniciais estão no site dos [Labs de C](https://insper.github.io/La
 [exercicios-balanceia-abb]: https://us.prairielearn.com/pl/course_instance/211219/assessment/2651600
 [exercicios-remove-abb]: https://us.prairielearn.com/pl/course_instance/211219/assessment/2651603
 
-<!---->
-<!-- ### Exercícios extras -->
-<!---->
-<!-- Os seguintes exercícios do leetcode são interessantes e relacionados ao assunto atual. -->
-<!---->
-<!-- 1. (**BÁSICO**)[Soma de caminho até folha](https://leetcode.com/problems/path-sum/) -->
-<!-- 2. (**BÁSICO**)[Soma K](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) -->
-<!-- 3. (**BÁSICO**)[Altura mínima](https://leetcode.com/problems/minimum-depth-of-binary-tree/) -->
-<!-- 5. (**MÉDIO**)[Convertendo array ordenado em árvore](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) -->
-<!---->
-<!---->
+
+### Exercícios extras
+
+Os seguintes exercícios do leetcode são interessantes e relacionados ao assunto atual.
+
+1. (**BÁSICO**)[Soma de caminho até folha](https://leetcode.com/problems/path-sum/)
+2. (**BÁSICO**)[Soma K](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)
+3. (**BÁSICO**)[Altura mínima](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
+5. (**MÉDIO**)[Convertendo array ordenado em árvore](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
+6. Leetcode 101.  Symmetric Tree
+7. Leetcode 129. Sum Root to Leaf numbers
+8. Leetcode 199. Right view of tree
+9. Leetcode 257. Binary tree paths (fazer em Python)
+
+
 <!-- ## Grafos -->
 <!---->
 <!---->
