@@ -1,4 +1,4 @@
----
+    ---
 title: Algoritmos e Estruturas de dados
 subtitle: 2026.1
 ...
@@ -30,17 +30,16 @@ subtitle: 2026.1
 Teremos os seguinte itens de avaliação
 
 - $PL$ - média de todos os exercícios no PrairieLearn
-- $QG$ - média dos quizzes (componente de grupo)
 - $P1$ - prova de árvores 
 - $P2$ - prova de grafos
 
 A nota final $NF$ é calculada da seguinte maneira. 
 
 $$
-NF = 0.2 \times PL + P1 \times 0.2 + P2 \times 0.4 + QG \times 0.2 
+NF = 0.25 \times PL + P1 \times 0.3 + P2 \times 0.45
 $$
 
-Com a condição de que $(2 \times P1 + 4 \times P2)/6 \geq 4.5$. 
+Com a condição de que $(P1 + 2 \times P2)/3 \geq 4.5$. 
 
 
 # Como usar o material
